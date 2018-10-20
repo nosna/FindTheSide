@@ -39,6 +39,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     let configuration = ARWorldTrackingConfiguration()
     var level = 1
+    
     override func viewDidLoad() {
         
         //time
@@ -47,10 +48,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         // Set the view's delegate
         sceneView.delegate = self
-        // Show statistics such as fps and timing information
-        //        sceneView.showsStatistics = true
-        // Create a new scene
-        //        let scene = SCNScene(named: "art.scnassets/heart.scn")!
         //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         // 
         // Set the scene to the view
@@ -85,26 +82,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func generateCubes() {
-        for lvl in 1 ... level {
+        let spCube = Int.random(in: 1...level)
+        
+        for cube in 1 ... level {
             let cubeNode = SCNNode()
             cubeNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
             cubeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
             
-            let x = Float.random(in: -0.3 ... 0.3)
-            let y = Float.random(in: -0.3 ... 0.3)
+            let x = Float.random(in: -0.5 ... 0.5)
+            let y = Float.random(in: -0.5 ... 0.5)
             let z = Float.random(in: -0.5 ... 0)
             cubeNode.position = SCNVector3(x, y, z)
             
             sceneView.scene.rootNode.addChildNode(cubeNode)
+            
+            if cube == spCube {
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.99, height: 0.99, length: 0.99, chamferRadius: 0.01))
+                sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+                cubeNode.addChildNode(sideNode)
+            }
         }
-
-        //        let wrapperNode = SCNNode()
-        //        for child in heartScene.rootNode.childNodes {
-        //            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
-        //            wrapperNode.addChildNode(child)
-        //        }
-        //        heartNode.addChildNode(wrapperNode)
     }
     
     @IBAction func reset(_ sender: Any) {
