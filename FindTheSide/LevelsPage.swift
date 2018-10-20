@@ -12,6 +12,7 @@ import ARKit
 
 class LevelsPage: UIViewController, ARSCNViewDelegate {
 
+    @IBOutlet weak var sceneView: ARSCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

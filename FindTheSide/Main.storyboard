@@ -50,6 +50,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nkh-DB-DB9"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneViewer" destination="6kx-fv-h8D" id="Kbr-0b-eyy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PNC-Jt-SQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +82,9 @@
                                 <state key="normal" title="9">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PWU-yH-tVR" kind="show" id="4nB-w0-5Nf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-wz-CkC">
                                 <rect key="frame" x="124" y="360" width="52" height="52"/>
@@ -191,6 +197,9 @@
                                 <state key="normal" title="1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="PWU-yH-tVR" kind="show" id="pBS-hx-Fc8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-ez-2vh">
                                 <rect key="frame" x="124" y="202" width="52" height="52"/>
@@ -368,6 +377,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IKe-Kf-kZ5"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="nan-u3-8H1" id="DYE-ey-i8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vs-MV-x96" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,7 +396,7 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-NH-7AR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-Yl-Ye1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-Yl-Ye1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="JBq-LW-C9N"/>
@@ -393,6 +405,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-8h-erj">
                                 <rect key="frame" x="167" y="615" width="41" height="32"/>
@@ -466,6 +479,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="4nB-w0-5Nf"/>
         <segue reference="gWg-Mp-ZKB"/>
     </inferredMetricsTieBreakers>
 </document>
