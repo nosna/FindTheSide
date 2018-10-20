@@ -18,7 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //yoyoyo
     
     let configuration = ARWorldTrackingConfiguration()
-    
+    var level = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set the view's delegate
@@ -61,15 +61,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     @IBAction func mua(_ sender: Any) {
-        //        let heartNode = SCNNode()
-        //        heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
-        //        heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
-        //        heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        let heartNode = SCNNode()
+        heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+        heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
+        heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         
-        let heartScene = SCNScene(named: "art.scnassets/heart.scn")!
-        guard let heartNode = heartScene.rootNode.childNode(withName: "heart", recursively: true) else {
-            return
-        }
         let x = Float.random(in: -0.3 ... 0.3)
         let y = Float.random(in: -0.3 ... 0.3)
         let z = Float.random(in: -0.5 ... 0)
