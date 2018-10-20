@@ -18,8 +18,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var time: Timer!
     var countdown:Int = 60
     let configuration = ARWorldTrackingConfiguration()
-    var level = 2
-    var highest: Level!
+    static var level = 2
+    static var highest: Level!
+    static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
     var otherCubes: [SCNVector3] = []
     
@@ -61,8 +62,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         nextLevel.isEnabled = false;
         menu.isEnabled = false;
         tryAgain.isEnabled = false;
-        highest = CoreDataHelper.retrieveLevel()
-        print("The highest level so far is " + String(highest.levelNum))
         generateCubes()
     }
     
@@ -92,9 +91,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func generateCubes() {
-        let spCube = Int.random(in: 1...level)
+        let spCube = Int.random(in: 1...ViewController.level)
         
-        for cube in 1 ... level {
+        for cube in 1 ... ViewController.level {
             let cubeNode = SCNNode()
             cubeNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
@@ -146,8 +145,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         menu.isEnabled = true
         var currentHighest = CoreDataHelper.retrieveLevel()!
         var highNum = currentHighest.levelNum
-        if(level > Int(highNum)) {
-            CoreDataHelper.createLevel(num: Int64(level))
+        if(ViewController.level > Int(highNum)) {
+            CoreDataHelper.createLevel(num: Int64(ViewController.level))
             CoreDataHelper.deleteLevel(level: currentHighest)
         }
     }
