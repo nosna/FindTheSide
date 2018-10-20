@@ -103,13 +103,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 cubeNode.addChildNode(sideNode)
             }
         }
-
-        //        let wrapperNode = SCNNode()
-        //        for child in heartScene.rootNode.childNodes {
-        //            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
-        //            wrapperNode.addChildNode(child)
-        //        }
-        //        heartNode.addChildNode(wrapperNode)
     }
     
     @IBAction func reset(_ sender: Any) {
