@@ -64,6 +64,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         generateCubes()
     }
     
+    //MARK: ARView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -132,6 +133,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
         }
     
+    //MARK: - Game Result
     func gameIsWon(){
         reset()
         nextLevel.isEnabled = true
