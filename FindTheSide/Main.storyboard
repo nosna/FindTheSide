@@ -51,6 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="nkh-DB-DB9"/>
                     </view>
                     <connections>
+                        <outlet property="sceneView" destination="6kx-fv-h8D" id="Jgp-Sa-DpU"/>
                         <outlet property="sceneViewer" destination="6kx-fv-h8D" id="Kbr-0b-eyy"/>
                     </connections>
                 </viewController>
@@ -524,6 +525,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6nF-nU-Rda"/>
-        <segue reference="gWg-Mp-ZKB"/>
+        <segue reference="a7g-vu-DQx"/>
     </inferredMetricsTieBreakers>
 </document>
