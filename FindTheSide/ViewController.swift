@@ -16,10 +16,35 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //hello!!!!!!!!
     //wby
     
+    //time
+    var time: Timer!
+    var countdown:Int = 60
+    @IBOutlet weak var timer: UILabel!
+    
+    @objc
+    func countdownAction() {
+        countdown -= 1
+        if countdown == 0 {
+            time.invalidate()
+            timer.text = "Time out!"
+        } else {
+            timer.text = "\(countdown)"
+        }
+        
+    }
+    //
+    
+    
+    
+    
     let configuration = ARWorldTrackingConfiguration()
     var level = 1
     
     override func viewDidLoad() {
+        
+        //time
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)        
+        //
         super.viewDidLoad()
         // Set the view's delegate
         sceneView.delegate = self
