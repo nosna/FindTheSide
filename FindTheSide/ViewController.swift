@@ -15,10 +15,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     //hello!!!!!!!!
     //wby
-    //yoyoyo
     
     let configuration = ARWorldTrackingConfiguration()
-    var level = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set the view's delegate
@@ -60,8 +59,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - ARSCNViewDelegate
     
-    func generateCubes() {
+    @IBAction func mua(_ sender: Any) {
+        //        let heartNode = SCNNode()
+        //        heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+        //        heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
+        //        heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         
+<<<<<<< HEAD
         for lvl in 1 ... level {
             let cubeNode = SCNNode()
             cubeNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
@@ -75,12 +79,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             sceneView.scene.rootNode.addChildNode(cubeNode)
         }
+=======
+        let heartScene = SCNScene(named: "art.scnassets/heart.scn")!
+        guard let heartNode = heartScene.rootNode.childNode(withName: "heart", recursively: true) else {
+            return
+        }
+        let x = Float.random(in: -0.3 ... 0.3)
+        let y = Float.random(in: -0.3 ... 0.3)
+        let z = Float.random(in: -0.5 ... 0)
+        heartNode.position = SCNVector3(x, y, z)
+        
+>>>>>>> 2bbc0e969c526f8dcc2f94fed92d22953199d3b1
         //        let wrapperNode = SCNNode()
         //        for child in heartScene.rootNode.childNodes {
         //            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
         //            wrapperNode.addChildNode(child)
         //        }
         //        heartNode.addChildNode(wrapperNode)
+<<<<<<< HEAD
+=======
+        
+        sceneView.scene.rootNode.addChildNode(heartNode)
+>>>>>>> 2bbc0e969c526f8dcc2f94fed92d22953199d3b1
     }
     
     @IBAction func reset(_ sender: Any) {
