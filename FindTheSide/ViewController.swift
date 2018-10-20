@@ -34,9 +34,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     //
     
-    
-    
-    
     let configuration = ARWorldTrackingConfiguration()
     var level = 2
     
