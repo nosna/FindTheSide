@@ -159,6 +159,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Do something with the new transform
         let currentTransform = frame.camera.transform
         print(currentTransform)
+        
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
