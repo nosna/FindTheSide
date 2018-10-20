@@ -16,17 +16,13 @@ class CoreDataHelper{
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
-    static var isFirst = true
     
     static func createLevel(num: Int64){
         let userEntity = NSEntityDescription.entity(forEntityName: "Level", in: managedContext)!
         let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
-        if(isFirst) {
-            user.setValue(num, forKey: "levelNum")
-        }
+        user.setValue(num, forKey: "levelNum")
         do{
             try managedContext.save()
-            isFirst = false
         } catch {
             print("Failed saving")
         }
