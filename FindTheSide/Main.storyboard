@@ -23,6 +23,9 @@
                                 <state key="normal" title="Start Game">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="FxN-Xv-6Xp" kind="show" id="0dX-K6-VxQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-Xc-Atb">
                                 <rect key="frame" x="54" y="182" width="266" height="37.5"/>
@@ -173,6 +176,16 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neR-AE-BwY">
+                                <rect key="frame" x="158" y="571" width="58" height="40"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="q1H-El-qlI" kind="show" id="9NP-F9-BPv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -182,18 +195,27 @@
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="129" id="8p9-Da-nef"/>
                             <constraint firstItem="7NZ-1i-sEH" firstAttribute="top" secondItem="7DJ-bW-1lC" secondAttribute="bottom" constant="8" id="9MY-34-xXl"/>
                             <constraint firstItem="94y-ct-i7k" firstAttribute="leading" secondItem="7DJ-bW-1lC" secondAttribute="trailing" constant="8" id="CV7-dr-k3d"/>
+                            <constraint firstItem="neR-AE-BwY" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="158" id="Cpw-Pe-EUz"/>
                             <constraint firstItem="7DJ-bW-1lC" firstAttribute="top" secondItem="hAk-UT-ja4" secondAttribute="bottom" constant="8" id="D3B-XH-H6F"/>
                             <constraint firstItem="NCQ-r9-jCN" firstAttribute="leading" secondItem="94y-ct-i7k" secondAttribute="trailing" constant="8" id="FUN-gq-xjz"/>
                             <constraint firstItem="t7G-tc-82b" firstAttribute="leading" secondItem="yAa-CN-gYK" secondAttribute="trailing" constant="8" id="ODw-d7-7tb"/>
+                            <constraint firstItem="Jor-Ju-Wds" firstAttribute="top" secondItem="7Y6-q5-3Et" secondAttribute="bottom" constant="8" id="UQh-rg-sOO"/>
                             <constraint firstItem="7Y6-q5-3Et" firstAttribute="leading" secondItem="E8U-iv-sTn" secondAttribute="trailing" constant="8" id="VUH-7a-JUu"/>
                             <constraint firstItem="QKE-aY-5L9" firstAttribute="leading" secondItem="7NZ-1i-sEH" secondAttribute="trailing" constant="8" id="YIM-gf-xq6"/>
+                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="bottom" secondItem="neR-AE-BwY" secondAttribute="bottom" constant="56" id="asX-k8-NRS"/>
+                            <constraint firstItem="94y-ct-i7k" firstAttribute="top" secondItem="Jor-Ju-Wds" secondAttribute="bottom" constant="8" id="bfA-U3-Wdo"/>
                             <constraint firstItem="3Ui-Ck-hIK" firstAttribute="leading" secondItem="7Y6-q5-3Et" secondAttribute="trailing" constant="8" id="cHt-7O-3Ra"/>
+                            <constraint firstItem="NCQ-r9-jCN" firstAttribute="top" secondItem="DIE-a8-Tig" secondAttribute="bottom" constant="8" id="dYv-O0-b7Z"/>
                             <constraint firstItem="sB7-VH-AgR" firstAttribute="leading" secondItem="DIE-a8-Tig" secondAttribute="trailing" constant="8" id="eOD-1N-ovz"/>
+                            <constraint firstItem="QKE-aY-5L9" firstAttribute="top" secondItem="94y-ct-i7k" secondAttribute="bottom" constant="8" id="j1K-bq-zNo"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="KnF-TU-VB0" secondAttribute="trailing" constant="130" id="jin-N9-2Nd"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="top" secondItem="mdT-7Q-oEd" secondAttribute="top" constant="81" id="kWo-nz-xO4"/>
+                            <constraint firstItem="yAa-CN-gYK" firstAttribute="top" secondItem="NCQ-r9-jCN" secondAttribute="bottom" constant="8" id="oer-vc-YLz"/>
                             <constraint firstItem="yAa-CN-gYK" firstAttribute="leading" secondItem="QKE-aY-5L9" secondAttribute="trailing" constant="8" id="pZi-kX-w7Y"/>
                             <constraint firstItem="DIE-a8-Tig" firstAttribute="leading" secondItem="Jor-Ju-Wds" secondAttribute="trailing" constant="8" id="sM6-dH-LMc"/>
                             <constraint firstItem="hAk-UT-ja4" firstAttribute="top" secondItem="E8U-iv-sTn" secondAttribute="bottom" constant="8" id="sYM-pP-gzn"/>
+                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="neR-AE-BwY" secondAttribute="trailing" constant="159" id="tji-LR-Tzv"/>
+                            <constraint firstItem="t7G-tc-82b" firstAttribute="top" secondItem="FfT-lN-28b" secondAttribute="bottom" constant="8" id="zdx-sC-LTO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdT-7Q-oEd"/>
                     </view>
@@ -226,6 +248,9 @@
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="FxN-Xv-6Xp" kind="show" id="QIN-zH-VQS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-a0-Nni">
                                 <rect key="frame" x="98" y="311" width="178" height="45"/>
@@ -267,4 +292,7 @@
             <point key="canvasLocation" x="397.60000000000002" y="-216.34182908545728"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QIN-zH-VQS"/>
+    </inferredMetricsTieBreakers>
 </document>
