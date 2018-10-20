@@ -13,8 +13,6 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
-    //hello!!!!!!!!
-    //wby
     
     //time
     var time: Timer!
@@ -24,9 +22,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var highest: Level!
     
     @IBOutlet weak var timer: UILabel!
-    @IBOutlet weak var nextLevel: UIButton!
-    @IBOutlet weak var menu: UIButton!
-    @IBOutlet weak var tryAgain: UIButton!
     
     @objc
     func countdownAction() {
@@ -42,6 +37,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //
     
     
+    @IBOutlet weak var tryAgain: UIButton!
+    @IBOutlet weak var nextLevel: UIButton!
+    @IBOutlet weak var menu: UIButton!
     
     override func viewDidLoad() {
         
