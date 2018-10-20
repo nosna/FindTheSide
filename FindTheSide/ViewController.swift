@@ -27,7 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a new scene
         //        let scene = SCNScene(named: "art.scnassets/heart.scn")!
         //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
-        //
+        // 
         // Set the scene to the view
         //        sceneView.scene = scene
         //        sceneView.session.run(configuration)
