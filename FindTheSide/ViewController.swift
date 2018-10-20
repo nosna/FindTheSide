@@ -98,7 +98,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.scene.rootNode.addChildNode(cubeNode)
             
             if cube == spCube {
-                let nums = [0.001, -0.001]
+                let nums = [0.002, -0.002]
                 let spNum = nums.randomElement()
                 
                 var i = Float()
