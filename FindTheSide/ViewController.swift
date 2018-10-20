@@ -107,20 +107,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.scene.rootNode.addChildNode(cubeNode)
             
             if cube == spCube {
-//                let nums = [0.002, -0.002]
-//                let spNum = nums.randomElement()
-//
-//                guard let unwrappedAttitude = attitude else {
-//                    fatalError("attitude was nil!")
-//                }
-//                spNum = Float(unwrappedAttitude.spNum)
-//
-//                var i = Float()
-//                var j = Float()
-//                var k = Float()
-//                var cds = [i,j,k]
-//                let spCd = Int.random(in: 0...2)
-//                cds[spCd] += spNum
                 let vecs = [SCNVector3(0.005,0,0),SCNVector3(-0.005,0,0),SCNVector3(0,0.005,0),SCNVector3(0,-0.005,0),SCNVector3(0,0,0.005),SCNVector3(0,0,-0.005)]
                 let spSide = vecs.randomElement()
                 let sideNode = SCNNode(geometry: SCNBox(width: 0.049, height: 0.049, length: 0.049, chamferRadius: 0.001))

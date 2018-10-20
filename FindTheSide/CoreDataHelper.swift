@@ -16,11 +16,11 @@ class CoreDataHelper{
     static let appDelegate = UIApplication.shared.delegate as! AppDelegate
     static let persistentContainer = appDelegate.persistentContainer
     static let managedContext = persistentContainer.viewContext
+    static let userEntity = NSEntityDescription.entity(forEntityName: "Level", in: managedContext)!
     
     static func createLevel(num: Int64){
-        let userEntity = NSEntityDescription.entity(forEntityName: "Level", in: managedContext)!
-        let user = NSManagedObject(entity: userEntity, insertInto: managedContext)
-        user.setValue(num, forKey: "levelNum")
+        let level = NSManagedObject(entity: userEntity, insertInto: managedContext)
+        level.setValue(num, forKey: "levelNum")
         do{
             try managedContext.save()
             print("Succeeded in saving")
