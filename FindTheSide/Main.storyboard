@@ -54,13 +54,153 @@
                     <view key="view" contentMode="scaleToFill" id="36B-3f-EiZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-TU-VB0">
+                                <rect key="frame" x="129" y="101" width="116" height="38"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8U-iv-sTn">
+                                <rect key="frame" x="43" y="181" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y6-q5-3Et">
+                                <rect key="frame" x="111" y="181" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-T5-jpf">
+                                <rect key="frame" x="247" y="181" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-Ck-hIK">
+                                <rect key="frame" x="179" y="181" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAk-UT-ja4">
+                                <rect key="frame" x="43" y="249" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-Ju-Wds">
+                                <rect key="frame" x="111" y="249" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB7-VH-AgR">
+                                <rect key="frame" x="247" y="249" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-a8-Tig">
+                                <rect key="frame" x="179" y="249" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DJ-bW-1lC">
+                                <rect key="frame" x="43" y="317" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94y-ct-i7k">
+                                <rect key="frame" x="111" y="317" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="10">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfT-lN-28b">
+                                <rect key="frame" x="247" y="317" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="12">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-r9-jCN">
+                                <rect key="frame" x="179" y="317" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="11">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-aY-5L9">
+                                <rect key="frame" x="111" y="385" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="14">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7G-tc-82b">
+                                <rect key="frame" x="247" y="385" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="16">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAa-CN-gYK">
+                                <rect key="frame" x="179" y="385" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="15">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NZ-1i-sEH">
+                                <rect key="frame" x="43" y="385" width="60" height="60"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="13">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nqk-T5-jpf" firstAttribute="leading" secondItem="3Ui-Ck-hIK" secondAttribute="trailing" constant="8" id="6JU-kb-QPy"/>
+                            <constraint firstItem="Jor-Ju-Wds" firstAttribute="leading" secondItem="hAk-UT-ja4" secondAttribute="trailing" constant="8" id="7L0-Qm-F7b"/>
+                            <constraint firstItem="FfT-lN-28b" firstAttribute="leading" secondItem="NCQ-r9-jCN" secondAttribute="trailing" constant="8" id="8OI-It-KJO"/>
+                            <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="129" id="8p9-Da-nef"/>
+                            <constraint firstItem="7NZ-1i-sEH" firstAttribute="top" secondItem="7DJ-bW-1lC" secondAttribute="bottom" constant="8" id="9MY-34-xXl"/>
+                            <constraint firstItem="94y-ct-i7k" firstAttribute="leading" secondItem="7DJ-bW-1lC" secondAttribute="trailing" constant="8" id="CV7-dr-k3d"/>
+                            <constraint firstItem="7DJ-bW-1lC" firstAttribute="top" secondItem="hAk-UT-ja4" secondAttribute="bottom" constant="8" id="D3B-XH-H6F"/>
+                            <constraint firstItem="NCQ-r9-jCN" firstAttribute="leading" secondItem="94y-ct-i7k" secondAttribute="trailing" constant="8" id="FUN-gq-xjz"/>
+                            <constraint firstItem="t7G-tc-82b" firstAttribute="leading" secondItem="yAa-CN-gYK" secondAttribute="trailing" constant="8" id="ODw-d7-7tb"/>
+                            <constraint firstItem="7Y6-q5-3Et" firstAttribute="leading" secondItem="E8U-iv-sTn" secondAttribute="trailing" constant="8" id="VUH-7a-JUu"/>
+                            <constraint firstItem="QKE-aY-5L9" firstAttribute="leading" secondItem="7NZ-1i-sEH" secondAttribute="trailing" constant="8" id="YIM-gf-xq6"/>
+                            <constraint firstItem="3Ui-Ck-hIK" firstAttribute="leading" secondItem="7Y6-q5-3Et" secondAttribute="trailing" constant="8" id="cHt-7O-3Ra"/>
+                            <constraint firstItem="sB7-VH-AgR" firstAttribute="leading" secondItem="DIE-a8-Tig" secondAttribute="trailing" constant="8" id="eOD-1N-ovz"/>
+                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="KnF-TU-VB0" secondAttribute="trailing" constant="130" id="jin-N9-2Nd"/>
+                            <constraint firstItem="KnF-TU-VB0" firstAttribute="top" secondItem="mdT-7Q-oEd" secondAttribute="top" constant="81" id="kWo-nz-xO4"/>
+                            <constraint firstItem="yAa-CN-gYK" firstAttribute="leading" secondItem="QKE-aY-5L9" secondAttribute="trailing" constant="8" id="pZi-kX-w7Y"/>
+                            <constraint firstItem="DIE-a8-Tig" firstAttribute="leading" secondItem="Jor-Ju-Wds" secondAttribute="trailing" constant="8" id="sM6-dH-LMc"/>
+                            <constraint firstItem="hAk-UT-ja4" firstAttribute="top" secondItem="E8U-iv-sTn" secondAttribute="bottom" constant="8" id="sYM-pP-gzn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mdT-7Q-oEd"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPs-bv-eUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-409" y="-216"/>
+            <point key="canvasLocation" x="-410.39999999999998" y="-216.34182908545728"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Yqb-1p-4Kx">
