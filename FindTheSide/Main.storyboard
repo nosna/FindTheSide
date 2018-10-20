@@ -196,6 +196,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="4Yd-y9-ocA"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="QE9-UR-oSM"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="RdU-P8-Nho"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="52" id="aYb-Ic-EiH"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="pqm-bH-0om"/>
                                     <constraint firstAttribute="height" constant="52" id="w0B-xc-9XV"/>
                                 </constraints>
@@ -320,8 +322,10 @@
                                 <rect key="frame" x="277" y="281" width="52" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="MDX-hz-21X"/>
                                     <constraint firstAttribute="width" constant="52" id="dGo-TB-6zs"/>
                                     <constraint firstAttribute="height" constant="52" id="nxU-aW-eC0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="rm6-1n-B9P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
                                 <state key="normal" title="8">
@@ -339,7 +343,7 @@
                                     <color key="titleShadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sL0-rb-XHd" kind="show" id="3H0-84-taB"/>
+                                    <segue destination="sL0-rb-XHd" kind="show" id="f38-1c-Sp7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-qP-wQg">
@@ -357,7 +361,6 @@
                             <constraint firstItem="XLr-wz-CkC" firstAttribute="top" secondItem="Pa6-WO-6Lj" secondAttribute="bottom" constant="27" id="4kt-3i-aPT"/>
                             <constraint firstItem="lNv-cg-X0K" firstAttribute="leading" secondItem="G2A-fs-YfQ" secondAttribute="trailing" constant="25" id="4s8-2d-dWy"/>
                             <constraint firstItem="SnG-2E-ghk" firstAttribute="top" secondItem="bay-dp-II4" secondAttribute="bottom" constant="27" id="5rI-ke-Igx"/>
-                            <constraint firstItem="G1b-rc-swQ" firstAttribute="leading" secondItem="bay-dp-II4" secondAttribute="trailing" constant="25" id="6Dy-2y-leK"/>
                             <constraint firstItem="XLr-wz-CkC" firstAttribute="leading" secondItem="fdP-Yf-dpu" secondAttribute="trailing" constant="26" id="6qf-86-7Xq"/>
                             <constraint firstItem="XLr-wz-CkC" firstAttribute="leading" secondItem="fdP-Yf-dpu" secondAttribute="trailing" constant="26" id="8qS-6W-VR4"/>
                             <constraint firstItem="04I-Cp-CgS" firstAttribute="leading" secondItem="IKe-Kf-kZ5" secondAttribute="leading" constant="46" id="A6b-fp-trJ"/>
@@ -380,12 +383,12 @@
                             <constraint firstItem="bay-dp-II4" firstAttribute="leading" secondItem="QSq-ez-2vh" secondAttribute="trailing" constant="24" id="MBX-fQ-mBS"/>
                             <constraint firstItem="04I-Cp-CgS" firstAttribute="top" secondItem="I2t-pA-fBS" secondAttribute="bottom" constant="27" id="OBn-fy-xgx"/>
                             <constraint firstAttribute="trailing" secondItem="nan-u3-8H1" secondAttribute="trailing" id="PKR-v5-tBr"/>
+                            <constraint firstItem="lNv-cg-X0K" firstAttribute="leading" secondItem="G2A-fs-YfQ" secondAttribute="trailing" constant="25" id="PR5-f5-saM"/>
                             <constraint firstItem="OcH-SN-7pn" firstAttribute="leading" secondItem="XLr-wz-CkC" secondAttribute="trailing" constant="24" id="Qnd-2y-sCh"/>
                             <constraint firstItem="G1b-rc-swQ" firstAttribute="top" secondItem="IKe-Kf-kZ5" secondAttribute="top" constant="182" id="RV2-Wc-UVG"/>
                             <constraint firstItem="lNv-cg-X0K" firstAttribute="top" secondItem="410-q6-Xw8" secondAttribute="bottom" constant="25" id="Sq5-1o-nXp"/>
                             <constraint firstItem="Pa6-WO-6Lj" firstAttribute="leading" secondItem="04I-Cp-CgS" secondAttribute="trailing" constant="26" id="UGS-hq-mdK"/>
                             <constraint firstItem="SnG-2E-ghk" firstAttribute="leading" secondItem="Pa6-WO-6Lj" secondAttribute="trailing" constant="24" id="Vw6-IV-6NN"/>
-                            <constraint firstItem="G1b-rc-swQ" firstAttribute="leading" secondItem="bay-dp-II4" secondAttribute="trailing" constant="25" id="VwR-38-MsQ"/>
                             <constraint firstItem="XLr-wz-CkC" firstAttribute="leading" secondItem="fdP-Yf-dpu" secondAttribute="trailing" constant="26" id="Ww1-At-W1v"/>
                             <constraint firstItem="410-q6-Xw8" firstAttribute="leading" secondItem="OcH-SN-7pn" secondAttribute="trailing" constant="25" id="YA3-Kv-Urb"/>
                             <constraint firstItem="G2A-fs-YfQ" firstAttribute="leading" secondItem="2Gt-QL-jg4" secondAttribute="trailing" constant="24" id="YMY-dm-XrS"/>
@@ -406,9 +409,11 @@
                             <constraint firstItem="XLr-wz-CkC" firstAttribute="leading" secondItem="fdP-Yf-dpu" secondAttribute="trailing" constant="26" id="lYq-uN-f7N"/>
                             <constraint firstItem="2Gt-QL-jg4" firstAttribute="leading" secondItem="jny-BU-SGS" secondAttribute="trailing" constant="26" id="lsz-PL-IcW"/>
                             <constraint firstItem="9Fq-oX-OoS" firstAttribute="top" secondItem="G1b-rc-swQ" secondAttribute="bottom" constant="27" id="mjb-ec-tIK"/>
+                            <constraint firstItem="G1b-rc-swQ" firstAttribute="leading" secondItem="bay-dp-II4" secondAttribute="trailing" constant="25" id="nRO-fA-ovV"/>
                             <constraint firstItem="410-q6-Xw8" firstAttribute="leading" secondItem="OcH-SN-7pn" secondAttribute="trailing" constant="25" id="nU7-bD-d0c"/>
                             <constraint firstItem="9Fq-oX-OoS" firstAttribute="leading" secondItem="SnG-2E-ghk" secondAttribute="trailing" constant="25" id="nZJ-fC-VBc"/>
                             <constraint firstItem="IKe-Kf-kZ5" firstAttribute="trailing" secondItem="G1b-rc-swQ" secondAttribute="trailing" constant="46" id="pW4-mm-CQP"/>
+                            <constraint firstItem="G1b-rc-swQ" firstAttribute="leading" secondItem="bay-dp-II4" secondAttribute="trailing" constant="25" id="qFR-UN-J5e"/>
                             <constraint firstItem="QSq-ez-2vh" firstAttribute="leading" secondItem="I2t-pA-fBS" secondAttribute="trailing" constant="26" id="u8n-nI-9qd"/>
                             <constraint firstItem="2Gt-QL-jg4" firstAttribute="leading" secondItem="jny-BU-SGS" secondAttribute="trailing" constant="26" id="waW-RY-cSu"/>
                             <constraint firstItem="fdP-Yf-dpu" firstAttribute="top" secondItem="04I-Cp-CgS" secondAttribute="bottom" constant="27" id="x6k-3P-etU"/>
@@ -518,7 +523,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O1Z-Hb-cxX"/>
+        <segue reference="6nF-nU-Rda"/>
         <segue reference="gWg-Mp-ZKB"/>
     </inferredMetricsTieBreakers>
 </document>
