@@ -143,12 +143,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset()
         nextLevel.isEnabled = true
         menu.isEnabled = true
-        var currentHighest = CoreDataHelper.retrieveLevel()!
-        var highNum = currentHighest.levelNum
-        if(ViewController.level > Int(highNum)) {
+        ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
+        if(ViewController.highest != nil){
+            var highNum = ViewController.highest.levelNum
+            if(ViewController.level > Int(highNum)) {
+                CoreDataHelper.createLevel(num: Int64(ViewController.level))
+                CoreDataHelper.deleteLevel(level: ViewController.highest)
+            }
+        } else {
             CoreDataHelper.createLevel(num: Int64(ViewController.level))
-            CoreDataHelper.deleteLevel(level: currentHighest)
         }
+        
+        
     }
     
     func gameIsLost(){
