@@ -20,6 +20,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let configuration = ARWorldTrackingConfiguration()
     var level = 2
     var highest: Level!
+    var spCubeLoc = SCNVector3(0,0,0)
+    var otherCubes: [SCNVector3] = []
     
     @IBOutlet weak var timer: UILabel!
     
@@ -111,6 +113,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
                 sideNode.position = spSide!
                 cubeNode.addChildNode(sideNode)
+                
+                spCubeLoc = cubeNode.position
+            } else {
+                otherCubes.append(cubeNode.position)
             }
         }
     }
@@ -162,6 +168,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let currentTransform = frame.camera.transform
         print(currentTransform)
         
+        if spCubeLoc.x-0.025 ... spCubeLoc.x+0.025 ~= currentTransform.columns.3.x ||
+            spCubeLoc.y-0.025 ... spCubeLoc.y+0.025 ~= currentTransform.columns.3.y ||
+            spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentTransform.columns.3.z {
+            gameIsWon()
+        } else {
+            for cube in 0...otherCubes.count - 1 {
+                if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentTransform.columns.3.x ||
+                    otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentTransform.columns.3.y ||
+                    otherCubes[cube].z-0.025 ... otherCubes[cube].z+0.025 ~= currentTransform.columns.3.z {
+                    gameIsLost()
+                }
+            }
+        }
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
