@@ -11,9 +11,13 @@ import CoreData
 import UIKit
 
 class CoreDataHelper{
-//    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//    lazy var managedObject = appDelegate.persistentContainer.viewContext
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var managedObject = appDelegate.persistentContainer.viewContext
+//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    static func createLevel(){
+        let a = NSEntityDescription.insertNewObject(forEntityName:"Note", into: managedObject)
+    }
 
     
     static func saveLevel(){
