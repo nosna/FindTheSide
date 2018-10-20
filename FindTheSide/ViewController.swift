@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-var level: Int!
+var level: Int = 10
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
@@ -49,6 +49,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         //MARK: time
         super.viewDidLoad()
+        print(level)
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)        
         //
         // Set the view's delegate
@@ -64,7 +65,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         menu.isHidden = true
         tryAgain.isHidden = true
         generateCubes()
-        session(ARSession, didUpdate: ARFrame)
+//        session(ARSession, didUpdate: ARFrame)
     }
     
     //MARK: ARView

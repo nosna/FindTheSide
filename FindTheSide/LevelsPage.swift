@@ -35,5 +35,7 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     @IBAction func startSearchQuery(sender: AnyObject) {
         let button = sender as! UIButton
         level = button.tag
+        print("the tag of the button is" + String(button.tag))
+        print(level)
     }
 }
