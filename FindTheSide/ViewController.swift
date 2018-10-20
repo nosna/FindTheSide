@@ -60,16 +60,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - ARSCNViewDelegate
     
-    @IBAction func mua(_ sender: Any) {
-        let heartNode = SCNNode()
-        heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
-        heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
-        heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+    func generateCubes() {
         
-        let x = Float.random(in: -0.3 ... 0.3)
-        let y = Float.random(in: -0.3 ... 0.3)
-        let z = Float.random(in: -0.5 ... 0)
-        heartNode.position = SCNVector3(x, y, z)
+        for lvl in 1 ... level {
+            let heartNode = SCNNode()
+            heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
+            heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+            
+            let x = Float.random(in: -0.3 ... 0.3)
+            let y = Float.random(in: -0.3 ... 0.3)
+            let z = Float.random(in: -0.5 ... 0)
+            heartNode.position = SCNVector3(x, y, z)
+            
+            sceneView.scene.rootNode.addChildNode(heartNode)
+        }
+        
         
         //        let wrapperNode = SCNNode()
         //        for child in heartScene.rootNode.childNodes {
@@ -78,7 +84,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //        }
         //        heartNode.addChildNode(wrapperNode)
         
-        sceneView.scene.rootNode.addChildNode(heartNode)
+        
     }
     
     @IBAction func reset(_ sender: Any) {
