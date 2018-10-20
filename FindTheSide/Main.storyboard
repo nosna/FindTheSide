@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neR-AE-BwY">
-                                <rect key="frame" x="158" y="766" width="97" height="40"/>
+                                <rect key="frame" x="158" y="-130" width="97" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Menu">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
