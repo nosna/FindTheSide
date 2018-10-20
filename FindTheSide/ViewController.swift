@@ -88,8 +88,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
             cubeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
             
-            let x = Float.random(in: -0.3 ... 0.3)
-            let y = Float.random(in: -0.3 ... 0.3)
+            let x = Float.random(in: -0.5 ... 0.5)
+            let y = Float.random(in: -0.5 ... 0.5)
             let z = Float.random(in: -0.5 ... 0)
             cubeNode.position = SCNVector3(x, y, z)
             
