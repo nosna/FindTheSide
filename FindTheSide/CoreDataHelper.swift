@@ -29,6 +29,15 @@ class CoreDataHelper{
         }
     }
     
+    static func deleteLevel(level: Level){
+        managedContext.delete(level)
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save \(error)")
+        }
+    }
+    
     static func retrieveLevel() -> Level?
     {
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Level")

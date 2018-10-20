@@ -136,9 +136,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset()
         nextLevel.isEnabled = true
         menu.isEnabled = true
-        var currentHighest = CoreDataHelper.retrieveLevel()?.levelNum
-        if(level > Int(currentHighest!)) {
-        CoreDataHelper.createLevel(num: <#T##Int64#>)
+        var currentHighest = CoreDataHelper.retrieveLevel()!
+        var highNum = currentHighest.levelNum
+        if(level > Int(highNum)) {
+            CoreDataHelper.createLevel(num: Int64(level))
+            CoreDataHelper.deleteLevel(level: currentHighest)
         }
     }
     
