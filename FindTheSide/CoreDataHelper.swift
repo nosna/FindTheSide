@@ -11,26 +11,33 @@ import CoreData
 import UIKit
 
 class CoreDataHelper{
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    lazy var managedObject = appDelegate.persistentContainer.viewContext
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//    lazy var managedContext = appDelegate.persistentContainer.viewContext
+    static let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    static let persistentContainer = appDelegate.persistentContainer
+    static let managedContext = persistentContainer.viewContext
     
-    static func createLevel(){
-        let a = NSEntityDescription.insertNewObject(forEntityName:"Note", into: managedObject)
-    }
-
     
     static func saveLevel(){
+        let userEntity = NSEntityDescription.entity(forEntityName: "Level", in: managedContext)!
         do{
-            try
-        } catch let error as NSError {
-            print("Could not save \(error)")
+            try managedContext.save()
+        } catch {
+            print("Failed saving")
         }
     }
     
-    static func retrieveLevel() -> Int{
-       let fetchRequest<Int64> = NSFetchRequest(entityName: "Level")
-        
-        return 0;
+    static func retrieveNote() -> Int64
+    {
+        let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Level")
+        do {
+            let results = try managedContext.fetch(userFetch)
+            let level = results.first as! Level
+            return level.levelNum
+        } catch let error as NSError {
+            print("Could not fetch \(error)")
+            return 0
+        }
     }
+
 }
