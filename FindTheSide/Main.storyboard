@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller2-->
+        <!--View Controller-->
         <scene sceneID="7rQ-ct-sqf">
             <objects>
-                <viewController id="sL0-rb-XHd" customClass="ViewController2" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sL0-rb-XHd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qGV-tt-Ken">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,15 +55,15 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="-261.31934032983509"/>
         </scene>
-        <!--View Controller3-->
+        <!--View Controller-->
         <scene sceneID="sNq-dB-Qy5">
             <objects>
-                <viewController id="vDc-dD-1im" customClass="ViewController3" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vDc-dD-1im" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V1h-03-sR7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nan-u3-8H1" customClass="V">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nan-u3-8H1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdP-Yf-dpu">
@@ -441,8 +441,20 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="gWg-Mp-ZKB"/>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <segue reference="gWg-Mp-ZKB"/>
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> e8c6ad692b1f44e8bd6480392fa2979daeb58b23
         <segue reference="Tu1-9U-Dzm"/>
 >>>>>>> 52a042c90103910ef26f516a4f2e2d45853581f7
+>>>>>>> c420b2f0824459250b1f85ec1b9031fc617de601
         <segue reference="a7g-vu-DQx"/>
 >>>>>>> b267de36c421578e724f1d7ff457e1c341e1e950
     </inferredMetricsTieBreakers>
