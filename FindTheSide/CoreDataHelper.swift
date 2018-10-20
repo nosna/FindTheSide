@@ -23,6 +23,7 @@ class CoreDataHelper{
         user.setValue(num, forKey: "levelNum")
         do{
             try managedContext.save()
+            print("Succeeded in saving")
         } catch {
             print("Failed saving")
         }
