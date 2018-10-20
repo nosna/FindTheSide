@@ -392,15 +392,30 @@
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-8h-erj">
+                                <rect key="frame" x="167" y="615" width="41" height="32"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
+                                <state key="normal" title="EXIT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vDc-dD-1im" kind="show" id="gWg-Mp-ZKB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="4t4-Yl-Ye1" secondAttribute="trailing" id="4bB-SS-3mJ"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="B04-Vu-VA5"/>
+                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="bottom" secondItem="lJ5-8h-erj" secondAttribute="bottom" constant="20" id="EDV-vq-JgD"/>
+                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="lJ5-8h-erj" secondAttribute="trailing" constant="167" id="LpW-ZT-Yy9"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="bottom" secondItem="tKj-m2-Xv7" secondAttribute="bottom" id="NeX-wJ-8QU"/>
                             <constraint firstItem="4t4-Yl-Ye1" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="RWb-hF-gG4"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="gbN-I7-5Ox"/>
+                            <constraint firstItem="lJ5-8h-erj" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" constant="167" id="iiL-Nh-hvb"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="trailing" secondItem="tKj-m2-Xv7" secondAttribute="trailing" id="q4e-GD-8mo"/>
                             <constraint firstItem="4t4-Yl-Ye1" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="sBe-1C-uHu"/>
                         </constraints>
@@ -413,6 +428,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tu1-9U-Dzm"/>
+        <segue reference="gWg-Mp-ZKB"/>
     </inferredMetricsTieBreakers>
 </document>
