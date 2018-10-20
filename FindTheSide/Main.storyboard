@@ -57,17 +57,42 @@
             <point key="canvasLocation" x="-476" y="-261.31934032983509"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="SND-m7-pJK">
+        <scene sceneID="c2c-1p-eZw">
             <objects>
-                <viewController id="cfS-0V-5D3" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1gV-1k-dmc">
+                <viewController id="PWU-yH-tVR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cca-5R-3bQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-NH-7AR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-Yl-Ye1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="JBq-LW-C9N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="4t4-Yl-Ye1" secondAttribute="trailing" id="4bB-SS-3mJ"/>
+                            <constraint firstItem="cQm-NH-7AR" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="B04-Vu-VA5"/>
+                            <constraint firstItem="cQm-NH-7AR" firstAttribute="bottom" secondItem="tKj-m2-Xv7" secondAttribute="bottom" id="NeX-wJ-8QU"/>
+                            <constraint firstItem="4t4-Yl-Ye1" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="RWb-hF-gG4"/>
+                            <constraint firstItem="cQm-NH-7AR" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="gbN-I7-5Ox"/>
+                            <constraint firstItem="cQm-NH-7AR" firstAttribute="trailing" secondItem="tKj-m2-Xv7" secondAttribute="trailing" id="q4e-GD-8mo"/>
+                            <constraint firstItem="4t4-Yl-Ye1" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="sBe-1C-uHu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tKj-m2-Xv7"/>
+                    </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RcN-dk-3uX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CzF-zd-AhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="-261"/>
+            <point key="canvasLocation" x="248.80000000000001" y="-261.31934032983509"/>
         </scene>
     </scenes>
 </document>
