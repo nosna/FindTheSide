@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sL0-rb-XHd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,465 +10,49 @@
     </dependencies>
     <scenes>
         <!--Welcome Page View Controller-->
-        <scene sceneID="7rQ-ct-sqf">
+        <scene sceneID="6iD-PS-jF5">
             <objects>
-                <viewController id="sL0-rb-XHd" customClass="WelcomePageViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qGV-tt-Ken">
+                <viewController id="q1H-El-qlI" customClass="WelcomePageViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RcY-WF-Ymk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find The Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-1c-Rux">
-                                <rect key="frame" x="62" y="180" width="251" height="38"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI7-8Z-9X4">
-                                <rect key="frame" x="115" y="409" width="145" height="40"/>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
-                                <state key="normal" title="StartGame">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vDc-dD-1im" kind="show" id="a7g-vu-DQx"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="sd8-1c-Rux" firstAttribute="top" secondItem="nkh-DB-DB9" secondAttribute="top" constant="160" id="15a-Uw-6R1"/>
-                            <constraint firstItem="cI7-8Z-9X4" firstAttribute="leading" secondItem="nkh-DB-DB9" secondAttribute="leading" constant="115" id="TZc-EF-5xn"/>
-                            <constraint firstItem="nkh-DB-DB9" firstAttribute="trailing" secondItem="sd8-1c-Rux" secondAttribute="trailing" constant="62" id="aC5-bg-llu"/>
-                            <constraint firstItem="sd8-1c-Rux" firstAttribute="leading" secondItem="nkh-DB-DB9" secondAttribute="leading" constant="62" id="eKc-mZ-p8x"/>
-                            <constraint firstItem="nkh-DB-DB9" firstAttribute="trailing" secondItem="cI7-8Z-9X4" secondAttribute="trailing" constant="115" id="gJ9-bt-oND"/>
-                            <constraint firstItem="nkh-DB-DB9" firstAttribute="bottom" secondItem="cI7-8Z-9X4" secondAttribute="bottom" constant="218" id="utU-mH-6VO"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="nkh-DB-DB9"/>
+                        <viewLayoutGuide key="safeArea" id="nro-om-aCf"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PNC-Jt-SQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKR-8T-9hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1228" y="-261.31934032983509"/>
+            <point key="canvasLocation" x="-1186" y="-216"/>
         </scene>
         <!--Levels Page-->
-        <scene sceneID="sNq-dB-Qy5">
+        <scene sceneID="MJM-Dj-pEN">
             <objects>
-                <viewController id="vDc-dD-1im" customClass="LevelsPage" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleAspectFit" id="V1h-03-sR7">
+                <viewController id="FxN-Xv-6Xp" customClass="LevelsPage" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="36B-3f-EiZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-qP-wQg">
-                                <rect key="frame" x="145" y="108" width="544" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-8e-g8x">
-                                <rect key="frame" x="111" y="1038" width="611" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="21"/>
-                                <state key="normal" title="Back to Menu">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sL0-rb-XHd" kind="show" id="ntC-lp-Rla"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" ambiguous="YES" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="A15-9d-hA9">
-                                <rect key="frame" x="276" y="212" width="693" height="283"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="m1J-fZ-wH7">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="283"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2t-pA-fBS">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="iyg-YB-Huu"/>
-                                                    <constraint firstAttribute="width" constant="52" id="sCD-b5-RU3"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="1">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="pBS-hx-Fc8"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-ez-2vh">
-                                                <rect key="frame" x="55" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="gkx-2V-wvJ"/>
-                                                    <constraint firstAttribute="height" constant="52" id="tt9-1x-8wC"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="2">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="vdQ-ek-Fsp"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bay-dp-II4">
-                                                <rect key="frame" x="110" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="6O9-xa-Ufp"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="gM5-gR-0jD"/>
-                                                    <constraint firstAttribute="width" constant="52" id="mFm-FN-MgI"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="3">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="O1Z-Hb-cxX"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1b-rc-swQ">
-                                                <rect key="frame" x="165" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="A2Y-FR-qpA"/>
-                                                    <constraint firstAttribute="width" constant="52" id="Jhl-Pg-YVB"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="4">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="cON-sp-BzJ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-Z6-oAy">
-                                        <rect key="frame" x="221" y="0.0" width="30" height="283"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04I-Cp-CgS">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="OB8-XX-UDk"/>
-                                                    <constraint firstAttribute="height" constant="52" id="rgJ-wo-tLi"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="5">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="LfV-lE-Tvx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa6-WO-6Lj">
-                                                <rect key="frame" x="0.0" y="77" width="30" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="Hso-Y5-U4s"/>
-                                                    <constraint firstAttribute="width" constant="52" id="gzh-69-e7p"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="6">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="DPf-QM-neY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-2E-ghk">
-                                                <rect key="frame" x="0.0" y="154" width="30" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="Jmg-9b-HGY"/>
-                                                    <constraint firstAttribute="width" constant="52" id="ZcQ-j3-hUj"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="7">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="SmF-ZV-8MI"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fq-oX-OoS">
-                                                <rect key="frame" x="0.0" y="231" width="30" height="52"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="dGo-TB-6zs"/>
-                                                    <constraint firstAttribute="height" constant="52" id="nxU-aW-eC0"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="8">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="NS0-yx-Uar"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <variation key="heightClass=regular-widthClass=regular" axis="horizontal"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ZbT-xc-OVe">
-                                        <rect key="frame" x="277" y="0.0" width="195" height="283"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdP-Yf-dpu">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="9ah-bl-F3c"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="O5X-3S-8zW"/>
-                                                    <constraint firstAttribute="width" constant="52" id="s8g-A5-TYV"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="wTR-Lc-MnY"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="9">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="4nB-w0-5Nf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLr-wz-CkC">
-                                                <rect key="frame" x="55" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="52" id="4Vg-bl-nZx"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="e3A-QX-UBo"/>
-                                                    <constraint firstAttribute="width" constant="52" id="rKe-31-1eE"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="10">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="1hc-Ty-d9f"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-SN-7pn">
-                                                <rect key="frame" x="110" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="71T-Eh-Jqt"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="J0z-ag-hXl"/>
-                                                    <constraint firstAttribute="width" constant="52" id="cKg-Ye-BBd"/>
-                                                    <constraint firstAttribute="height" constant="52" id="cnp-Yn-PT1"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="11">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="1TG-Ui-UHt"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="410-q6-Xw8">
-                                                <rect key="frame" x="165" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="37u-xO-JrX"/>
-                                                    <constraint firstAttribute="height" constant="52" id="7ao-Tt-I6h"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="12">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="lao-Oi-yG7"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="n0e-1s-VTr">
-                                        <rect key="frame" x="498" y="0.0" width="195" height="283"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jny-BU-SGS">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="CWW-72-1p6"/>
-                                                    <constraint firstAttribute="height" constant="52" id="DlW-xz-eRq"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="PNp-Lp-J6C"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="gb1-IJ-RmP"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="13">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="zYq-tH-mk0"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gt-QL-jg4">
-                                                <rect key="frame" x="55" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="WlB-iq-nLA"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="vWx-hJ-gZe"/>
-                                                    <constraint firstAttribute="height" constant="52" id="wzV-eh-DJx"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="14">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="6nF-nU-Rda"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2A-fs-YfQ">
-                                                <rect key="frame" x="110" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="OS9-AU-vnN"/>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="Pht-fl-pSA"/>
-                                                    <constraint firstAttribute="height" constant="52" id="YDS-LB-fMs"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="c4A-sv-8RD"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="gJ3-eg-d4m"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="15">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="2m7-gs-WiA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNv-cg-X0K">
-                                                <rect key="frame" x="165" y="0.0" width="30" height="283"/>
-                                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="52" id="4Yd-y9-ocA"/>
-                                                    <constraint firstAttribute="height" constant="52" id="w0B-xc-9XV"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="22"/>
-                                                <state key="normal" title="16">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="PWU-yH-tVR" kind="show" id="nCa-Ts-FfH"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <variation key="heightClass=regular-widthClass=regular" axis="vertical"/>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="A15-9d-hA9" secondAttribute="trailing" constant="276" id="5qe-5T-2zW"/>
-                            <constraint firstItem="A15-9d-hA9" firstAttribute="leading" secondItem="IKe-Kf-kZ5" secondAttribute="leading" constant="276" id="OmT-el-dUY"/>
-                            <constraint firstItem="IKe-Kf-kZ5" firstAttribute="trailing" secondItem="A15-9d-hA9" secondAttribute="trailing" constant="275" id="tCD-vb-Hcf"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="IKe-Kf-kZ5"/>
+                        <viewLayoutGuide key="safeArea" id="mdT-7Q-oEd"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Vs-MV-x96" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPs-bv-eUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="-261.31934032983509"/>
+            <point key="canvasLocation" x="-409" y="-216"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="c2c-1p-eZw">
+        <scene sceneID="Yqb-1p-4Kx">
             <objects>
-                <viewController id="PWU-yH-tVR" customClass="ViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cca-5R-3bQ">
+                <viewController id="K2O-Sj-CQC" customClass="ViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kiX-m1-3dH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-NH-7AR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </arscnView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-Yl-Ye1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="JBq-LW-C9N"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="-1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-8h-erj">
-                                <rect key="frame" x="167" y="615" width="41" height="32"/>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
-                                <state key="normal" title="EXIT">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vDc-dD-1im" kind="show" id="gWg-Mp-ZKB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ0-ej-Pdo">
-                                <rect key="frame" x="92" y="310" width="191" height="47"/>
-                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
-                                <state key="normal" title="Try Again">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-0G-PJo">
-                                <rect key="frame" x="92" y="268" width="191" height="45"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
-                                <state key="normal" title="Next Level">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFK-9Z-vob">
-                                <rect key="frame" x="92" y="321" width="191" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="4t4-Yl-Ye1" secondAttribute="trailing" id="4bB-SS-3mJ"/>
-                            <constraint firstItem="cQm-NH-7AR" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="B04-Vu-VA5"/>
-                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="nZ0-ej-Pdo" secondAttribute="trailing" constant="92" id="BDU-An-cEw"/>
-                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="bottom" secondItem="lJ5-8h-erj" secondAttribute="bottom" constant="20" id="EDV-vq-JgD"/>
-                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="lJ5-8h-erj" secondAttribute="trailing" constant="167" id="LpW-ZT-Yy9"/>
-                            <constraint firstItem="cQm-NH-7AR" firstAttribute="bottom" secondItem="tKj-m2-Xv7" secondAttribute="bottom" id="NeX-wJ-8QU"/>
-                            <constraint firstItem="nZ0-ej-Pdo" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" constant="92" id="NfV-CJ-YE8"/>
-                            <constraint firstItem="4t4-Yl-Ye1" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="RWb-hF-gG4"/>
-                            <constraint firstItem="Rcj-0G-PJo" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" constant="92" id="Tqt-7g-N99"/>
-                            <constraint firstItem="lJ5-8h-erj" firstAttribute="top" secondItem="nZ0-ej-Pdo" secondAttribute="bottom" constant="258" id="V3o-lf-d6r"/>
-                            <constraint firstItem="Rcj-0G-PJo" firstAttribute="top" secondItem="4t4-Yl-Ye1" secondAttribute="bottom" constant="168" id="Xjm-Ow-Y0q"/>
-                            <constraint firstItem="pFK-9Z-vob" firstAttribute="top" secondItem="Rcj-0G-PJo" secondAttribute="bottom" constant="8" id="a2T-wk-WRa"/>
-                            <constraint firstItem="pFK-9Z-vob" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" constant="92" id="eRk-TS-ZQq"/>
-                            <constraint firstItem="cQm-NH-7AR" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="gbN-I7-5Ox"/>
-                            <constraint firstItem="lJ5-8h-erj" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" constant="167" id="iiL-Nh-hvb"/>
-                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="Rcj-0G-PJo" secondAttribute="trailing" constant="92" id="oVt-3W-SkO"/>
-                            <constraint firstItem="cQm-NH-7AR" firstAttribute="trailing" secondItem="tKj-m2-Xv7" secondAttribute="trailing" id="q4e-GD-8mo"/>
-                            <constraint firstItem="4t4-Yl-Ye1" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="sBe-1C-uHu"/>
-                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="pFK-9Z-vob" secondAttribute="trailing" constant="92" id="sUk-Ds-Pgt"/>
-                            <constraint firstItem="nZ0-ej-Pdo" firstAttribute="top" secondItem="4t4-Yl-Ye1" secondAttribute="bottom" constant="210" id="tEc-7F-I0F"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tKj-m2-Xv7"/>
+                        <viewLayoutGuide key="safeArea" id="mqB-qt-snX"/>
                     </view>
-                    <connections>
-                        <outlet property="menu" destination="pFK-9Z-vob" id="7Un-2Y-Ysa"/>
-                        <outlet property="nextLevel" destination="Rcj-0G-PJo" id="uDH-u6-EP4"/>
-                        <outlet property="sceneView" destination="cQm-NH-7AR" id="6qn-yk-3gd"/>
-                        <outlet property="timer" destination="4t4-Yl-Ye1" id="jyO-Oj-FOB"/>
-                        <outlet property="tryAgain" destination="nZ0-ej-Pdo" id="09o-PR-60V"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CzF-zd-AhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfa-bM-EDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="502" y="-254"/>
+            <point key="canvasLocation" x="398" y="-216"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="vdQ-ek-Fsp"/>
-        <segue reference="a7g-vu-DQx"/>
-    </inferredMetricsTieBreakers>
 </document>
