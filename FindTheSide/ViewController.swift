@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-var level = 0
+var level: Int!
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
@@ -48,9 +48,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         
         //MARK: time
+        super.viewDidLoad()
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)        
         //
-        super.viewDidLoad()
         // Set the view's delegate
 //        sceneView.delegate = self
         //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
