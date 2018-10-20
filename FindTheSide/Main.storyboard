@@ -209,7 +209,30 @@
                     <view key="view" contentMode="scaleToFill" id="kiX-m1-3dH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00N-gd-QiU">
+                                <rect key="frame" x="151" y="42" width="73" height="28"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-9b-Vrw">
+                                <rect key="frame" x="161" y="609" width="53" height="38"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="22"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="00N-gd-QiU" firstAttribute="top" secondItem="mqB-qt-snX" secondAttribute="top" constant="22" id="Jtu-CH-7En"/>
+                            <constraint firstItem="00N-gd-QiU" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="151" id="KUF-bA-f8g"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="00N-gd-QiU" secondAttribute="trailing" constant="151" id="Krc-t6-shr"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="bottom" secondItem="hYs-9b-Vrw" secondAttribute="bottom" constant="20" id="mQ6-gS-ysI"/>
+                            <constraint firstItem="hYs-9b-Vrw" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="161" id="mfJ-Ny-B3I"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="161" id="tId-U5-tYh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mqB-qt-snX"/>
                     </view>
                 </viewController>
