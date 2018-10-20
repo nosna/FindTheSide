@@ -322,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfa-bM-EDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397.10144927536237" y="-216.84782608695653"/>
+            <point key="canvasLocation" x="397.10144927536237" y="-216.96428571428569"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
