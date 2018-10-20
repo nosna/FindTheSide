@@ -19,23 +19,7 @@ class WelcomePageViewController: UIViewController, ARSCNViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidLoad() {
-        
-        //time
-        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)
-        //
-        super.viewDidLoad()
-        // Set the view's delegate
-        //        sceneView.delegate = self
-        //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
-        //
-        // Set the scene to the view
-        //        sceneView.scene = scene
-        //        sceneView.session.run(configuration)
-        sceneView.autoenablesDefaultLighting = true
-        //
-        generateCubes()
-    }
+    let configuration = ARWorldTrackingConfiguration()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

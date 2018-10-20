@@ -339,7 +339,7 @@
                                     <color key="titleShadowColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sL0-rb-XHd" kind="show" id="Tu1-9U-Dzm"/>
+                                    <segue destination="sL0-rb-XHd" kind="show" id="3H0-84-taB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-qP-wQg">
@@ -518,8 +518,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tu1-9U-Dzm"/>
         <segue reference="O1Z-Hb-cxX"/>
-        <segue reference="a7g-vu-DQx"/>
+        <segue reference="gWg-Mp-ZKB"/>
     </inferredMetricsTieBreakers>
 </document>
