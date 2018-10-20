@@ -82,7 +82,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func generateCubes() {
-        for lvl in 1 ... level {
+        let spCube = Int.random(in: 1...level)
+        
+        for cube in 1 ... level {
             let cubeNode = SCNNode()
             cubeNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
@@ -94,14 +96,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             cubeNode.position = SCNVector3(x, y, z)
             
             sceneView.scene.rootNode.addChildNode(cubeNode)
+            
+            if cube == spCube {
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.99, height: 0.99, length: 0.99, chamferRadius: 0.01))
+                sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+                cubeNode.addChildNode(sideNode)
+            }
         }
-
-        //        let wrapperNode = SCNNode()
-        //        for child in heartScene.rootNode.childNodes {
-        //            child.geometry?.firstMaterial?.lightingModel = .physicallyBased
-        //            wrapperNode.addChildNode(child)
-        //        }
-        //        heartNode.addChildNode(wrapperNode)
     }
     
     @IBAction func reset(_ sender: Any) {
