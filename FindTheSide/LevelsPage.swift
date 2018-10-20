@@ -34,6 +34,6 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     
     @IBAction func startSearchQuery(sender: AnyObject) {
         let button = sender as! UIButton
-        ViewController.level = button.tag
+        level = button.tag
     }
 }
