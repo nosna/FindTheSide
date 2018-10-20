@@ -87,13 +87,25 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-NH-7AR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-Yl-Ye1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="JBq-LW-C9N"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tKj-m2-Xv7" firstAttribute="trailing" secondItem="4t4-Yl-Ye1" secondAttribute="trailing" id="4bB-SS-3mJ"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="B04-Vu-VA5"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="bottom" secondItem="tKj-m2-Xv7" secondAttribute="bottom" id="NeX-wJ-8QU"/>
+                            <constraint firstItem="4t4-Yl-Ye1" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="RWb-hF-gG4"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="leading" secondItem="tKj-m2-Xv7" secondAttribute="leading" id="gbN-I7-5Ox"/>
                             <constraint firstItem="cQm-NH-7AR" firstAttribute="trailing" secondItem="tKj-m2-Xv7" secondAttribute="trailing" id="q4e-GD-8mo"/>
+                            <constraint firstItem="4t4-Yl-Ye1" firstAttribute="top" secondItem="cca-5R-3bQ" secondAttribute="top" id="sBe-1C-uHu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tKj-m2-Xv7"/>
                     </view>

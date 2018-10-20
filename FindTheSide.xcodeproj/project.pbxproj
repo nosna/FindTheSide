@@ -15,6 +15,7 @@
 		3ED00100217AE84C0014AC89 /* FindTheSideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED000FF217AE84C0014AC89 /* FindTheSideTests.swift */; };
 		3ED0010B217AE84D0014AC89 /* FindTheSideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0010A217AE84D0014AC89 /* FindTheSideUITests.swift */; };
 		953D4AD1217B03830052EC3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953D4AD0217B03830052EC3C /* Main.storyboard */; };
+		BA7F1E84217B051A00907CE8 /* FindTheSide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA7F1E82217B051A00907CE8 /* FindTheSide.xcdatamodeld */; };
 		BAF1BA34217AF41000DA8AED /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1BA33217AF41000DA8AED /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3ED0010A217AE84D0014AC89 /* FindTheSideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTheSideUITests.swift; sourceTree = "<group>"; };
 		3ED0010C217AE84D0014AC89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953D4AD0217B03830052EC3C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BA7F1E83217B051A00907CE8 /* FindTheSide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindTheSide.xcdatamodel; sourceTree = "<group>"; };
 		BAF1BA33217AF41000DA8AED /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 		3ED000DC217AE8440014AC89 = {
 			isa = PBXGroup;
 			children = (
+				BA7F1E82217B051A00907CE8 /* FindTheSide.xcdatamodeld */,
 				3ED000E7217AE8440014AC89 /* FindTheSide */,
 				3ED000FE217AE84C0014AC89 /* FindTheSideTests */,
 				3ED00109217AE84D0014AC89 /* FindTheSideUITests */,
@@ -266,6 +269,7 @@
 				BAF1BA34217AF41000DA8AED /* CoreDataHelper.swift in Sources */,
 				3ED000ED217AE8450014AC89 /* ViewController.swift in Sources */,
 				3ED000E9217AE8450014AC89 /* AppDelegate.swift in Sources */,
+				BA7F1E84217B051A00907CE8 /* FindTheSide.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +590,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA7F1E82217B051A00907CE8 /* FindTheSide.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA7F1E83217B051A00907CE8 /* FindTheSide.xcdatamodel */,
+			);
+			currentVersion = BA7F1E83217B051A00907CE8 /* FindTheSide.xcdatamodel */;
+			path = FindTheSide.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3ED000DD217AE8440014AC89 /* Project object */;
 }
