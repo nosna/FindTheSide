@@ -10,6 +10,8 @@ import UIKit
 import SceneKit
 import ARKit
 
+var level: Int!
+
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
@@ -18,7 +20,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var time: Timer!
     var countdown:Int = 60
     let configuration = ARWorldTrackingConfiguration()
-    static var level = 2
     static var highest: Level!
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
@@ -47,9 +48,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         
         //MARK: time
+        super.viewDidLoad()
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)        
         //
-        super.viewDidLoad()
         // Set the view's delegate
 //        sceneView.delegate = self
         //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
@@ -59,9 +60,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //        sceneView.session.run(configuration)
         sceneView.autoenablesDefaultLighting = true
         //
-        nextLevel.isEnabled = false;
-        menu.isEnabled = false;
-        tryAgain.isEnabled = false;
+        nextLevel.isHidden = true
+        menu.isHidden = true
+        tryAgain.isHidden = true
         generateCubes()
         session(ARSession, didUpdate: ARFrame)
     }
@@ -92,9 +93,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func generateCubes() {
-        let spCube = Int.random(in: 1...ViewController.level)
+        let spCube = Int.random(in: 1...level)
         
-        for cube in 1 ... ViewController.level {
+        for cube in 1 ... level {
             let cubeNode = SCNNode()
             cubeNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
@@ -142,17 +143,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //MARK: - Game Result
     func gameIsWon(){
         reset()
-        nextLevel.isEnabled = true
-        menu.isEnabled = true
+        nextLevel.isHidden = false
+        menu.isHidden = false
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             var highNum = ViewController.highest.levelNum
-            if(ViewController.level > Int(highNum)) {
-                CoreDataHelper.createLevel(num: Int64(ViewController.level))
+            if(level > Int(highNum)) {
+                CoreDataHelper.createLevel(num: Int64(level))
                 CoreDataHelper.deleteLevel(level: ViewController.highest)
             }
         } else {
-            CoreDataHelper.createLevel(num: Int64(ViewController.level))
+            CoreDataHelper.createLevel(num: Int64(level))
         }
         
         
@@ -160,7 +161,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func gameIsLost(){
         reset()
-        tryAgain.isEnabled = true
+        tryAgain.isHidden = true
     }
     /*
      // Override to create and configure nodes for anchors added to the view's session.
