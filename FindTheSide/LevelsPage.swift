@@ -26,7 +26,7 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
         super.viewDidLoad()
         ViewController.highest = CoreDataHelper.retrieveLevel()!
         ViewController.highestNum = Int(ViewController.highest.levelNum)
-        print("The highest level so far is " + String(highest.levelNum))
+        print("The highest level so far is " + String(ViewController.highest.levelNum))
     }
     
     
