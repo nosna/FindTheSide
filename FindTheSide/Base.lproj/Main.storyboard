@@ -74,8 +74,6 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-<<<<<<< HEAD
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXY-hV-LAA">
                                 <rect key="frame" x="119" y="313" width="136" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,7 +87,6 @@
                         <constraints>
                             <constraint firstItem="aXY-hV-LAA" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="293" id="0Uz-V6-A0u"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="aXY-hV-LAA" secondAttribute="bottom" constant="314" id="4cv-8n-DfL"/>
-=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countdown" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNi-LO-QXA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <constraints>
@@ -101,32 +98,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-<<<<<<< HEAD
-                            <constraint firstItem="QNi-LO-QXA" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="AYS-Ap-vR6"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
-                            <constraint firstItem="QNi-LO-QXA" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="RZa-vI-TQq"/>
-=======
->>>>>>> dc327dbe8fc2031ad034f332774b3264c4bcf2a9
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="EKR-GY-aiu"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Egl-Xv-HpT"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="aXY-hV-LAA" secondAttribute="trailing" constant="120" id="Jss-kf-1to"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="Q3o-dV-SKM"/>
->>>>>>> 63f82f30bda263fee7210d39478696f6ce29ccab
-=======
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
->>>>>>> f83fafc70571ab187bc190a8b24ff98476a47ca9
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
-<<<<<<< HEAD
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="t8n-bS-Evh"/>
-                            <constraint firstItem="aXY-hV-LAA" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="119" id="u6k-cb-uWs"/>
-=======
->>>>>>> f83fafc70571ab187bc190a8b24ff98476a47ca9
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
@@ -136,14 +115,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
-=======
-            <point key="canvasLocation" x="140" y="132.68365817091455"/>
->>>>>>> dc327dbe8fc2031ad034f332774b3264c4bcf2a9
-=======
->>>>>>> f83fafc70571ab187bc190a8b24ff98476a47ca9
         </scene>
     </scenes>
 </document>
