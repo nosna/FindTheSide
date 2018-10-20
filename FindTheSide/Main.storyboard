@@ -513,8 +513,11 @@
                         <viewLayoutGuide key="safeArea" id="tKj-m2-Xv7"/>
                     </view>
                     <connections>
+                        <outlet property="menu" destination="pFK-9Z-vob" id="7Un-2Y-Ysa"/>
+                        <outlet property="nextLevel" destination="Rcj-0G-PJo" id="uDH-u6-EP4"/>
                         <outlet property="sceneView" destination="cQm-NH-7AR" id="6qn-yk-3gd"/>
                         <outlet property="timer" destination="4t4-Yl-Ye1" id="jyO-Oj-FOB"/>
+                        <outlet property="tryAgain" destination="nZ0-ej-Pdo" id="09o-PR-60V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CzF-zd-AhA" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -19,7 +19,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //time
     var time: Timer!
     var countdown:Int = 60
+    let configuration = ARWorldTrackingConfiguration()
+    var level = 2
+    var highest: Level!
+    
     @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var nextLevel: UIButton!
+    @IBOutlet weak var menu: UIButton!
+    @IBOutlet weak var tryAgain: UIButton!
     
     @objc
     func countdownAction() {
@@ -34,8 +41,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     //
     
-    let configuration = ARWorldTrackingConfiguration()
-    var level = 2
+    
     
     override func viewDidLoad() {
         
@@ -52,6 +58,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //        sceneView.session.run(configuration)
         sceneView.autoenablesDefaultLighting = true
         //
+        nextLevel.isEnabled = false;
+        menu.isEnabled = false;
+        tryAgain.isEnabled = false;
+        highest = CoreDataHelper.retrieveLevel()
+        print("The highest level so far is " + String(highest.levelNum))
         generateCubes()
     }
     
@@ -120,15 +131,33 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    @IBAction func reset(_ sender: Any) {
-        restartSession()
+//    @IBAction func reset(_ sender: Any) {
+//        restartSession()
+//    }
+    
+    func reset(){
+        sceneView.session.pause()
+        self.sceneView.scene.rootNode.enumerateChildNodes{
+            (node,_) in
+            node.removeFromParentNode()
+        }
+        self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    
+        //timer
+        countdown = 60
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+        }
+    
+    func gameIsWon(){
+        reset()
+        nextLevel.isEnabled = true
+        menu.isEnabled = true
+        CoreDataHelper.createLevel(num: <#T##Int64#>)
     }
     
-    func restartSession() {
-        sceneView.session.pause()
-        sceneView.scene.rootNode.enumerateChildNodes {(node,_) in node.removeFromParentNode()}
-        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-        
+    func gameIsLost(){
+        reset()
+        tryAgain.isEnabled = true
     }
     /*
      // Override to create and configure nodes for anchors added to the view's session.
