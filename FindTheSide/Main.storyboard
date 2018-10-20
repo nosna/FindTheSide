@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-Xc-Atb">
-                                <rect key="frame" x="54" y="206" width="305" height="37.666666666666657"/>
+                                <rect key="frame" x="54" y="206" width="305" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -59,13 +59,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-TU-VB0">
-                                <rect key="frame" x="129" y="124.99999999999999" width="155" height="37.333333333333329"/>
+                                <rect key="frame" x="129" y="125" width="155" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neR-AE-BwY">
-                                <rect key="frame" x="158" y="766" width="97" height="40"/>
+                                <rect key="frame" x="158" y="-130" width="97" height="40"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="Menu">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -88,14 +88,14 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y6-q5-3Et">
-                                                <rect key="frame" x="88.666666666666657" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-Ck-hIK">
-                                                <rect key="frame" x="177.33333333333334" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,14 +121,14 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-Ju-Wds">
-                                                <rect key="frame" x="88.666666666666657" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-a8-Tig">
-                                                <rect key="frame" x="177.33333333333334" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,14 +154,14 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94y-ct-i7k">
-                                                <rect key="frame" x="88.666666666666657" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="10">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-r9-jCN">
-                                                <rect key="frame" x="177.33333333333334" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="11">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,14 +187,14 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-aY-5L9">
-                                                <rect key="frame" x="88.666666666666657" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="14">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAa-CN-gYK">
-                                                <rect key="frame" x="177.33333333333334" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="15">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,12 +215,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="0K5-BQ-vN7"/>
-                            <constraint firstItem="cUf-Jw-A7H" firstAttribute="centerX" secondItem="mdT-7Q-oEd" secondAttribute="centerX" id="3LX-4J-iLb"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="59" id="5AE-5l-IhD"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="width" secondItem="36B-3f-EiZ" secondAttribute="height" multiplier="243:736" id="5lY-Jm-MAQ"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="129" id="8p9-Da-nef"/>
                             <constraint firstItem="neR-AE-BwY" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="158" id="Cpw-Pe-EUz"/>
-                            <constraint firstItem="cUf-Jw-A7H" firstAttribute="centerX" secondItem="mdT-7Q-oEd" secondAttribute="centerX" id="FOs-m3-3KM"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="bottom" secondItem="neR-AE-BwY" secondAttribute="bottom" constant="56" id="asX-k8-NRS"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="KnF-TU-VB0" secondAttribute="trailing" constant="130" id="jin-N9-2Nd"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="top" secondItem="KnF-TU-VB0" secondAttribute="bottom" constant="83.670000000000002" id="kWG-q3-Jhj"/>
