@@ -61,10 +61,18 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nan-u3-8H1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-qP-wQg">
+                                <rect key="frame" x="145" y="108" width="85" height="33"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IKe-Kf-kZ5" firstAttribute="trailing" secondItem="YEx-qP-wQg" secondAttribute="trailing" constant="145" id="GDs-Op-Yop"/>
                             <constraint firstItem="nan-u3-8H1" firstAttribute="leading" secondItem="IKe-Kf-kZ5" secondAttribute="leading" id="KRA-2d-i5O"/>
+                            <constraint firstItem="YEx-qP-wQg" firstAttribute="leading" secondItem="IKe-Kf-kZ5" secondAttribute="leading" constant="145" id="Kjs-ad-J1A"/>
                             <constraint firstAttribute="trailing" secondItem="nan-u3-8H1" secondAttribute="trailing" id="PKR-v5-tBr"/>
                             <constraint firstItem="nan-u3-8H1" firstAttribute="top" secondItem="V1h-03-sR7" secondAttribute="top" id="bv1-TG-eO2"/>
                             <constraint firstItem="nan-u3-8H1" firstAttribute="bottom" secondItem="IKe-Kf-kZ5" secondAttribute="bottom" id="kMO-mr-8ua"/>
