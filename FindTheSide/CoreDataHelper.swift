@@ -43,8 +43,10 @@ class CoreDataHelper{
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Level")
         do {
             let results = try managedContext.fetch(userFetch)
-            let level = results.first as! Level
-            return level
+            if(results.count != 0) {
+                return results.first as! Level
+            }
+            return nil
         } catch let error as NSError {
             print("Could not fetch \(error)")
             return nil
