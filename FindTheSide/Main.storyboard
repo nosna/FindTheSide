@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q1H-El-qlI">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,12 +14,24 @@
             <objects>
                 <viewController id="q1H-El-qlI" customClass="WelcomePageViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RcY-WF-Ymk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-Xc-Atb">
+                                <rect key="frame" x="0.0" y="182" width="375" height="41"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Find the Side">
+                                        <attributes>
+                                            <font key="NSFont" size="40" name="Copperplate-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORt-Fo-05r">
-                                <rect key="frame" x="115" y="625" width="184" height="40"/>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
+                                <rect key="frame" x="104" y="453" width="166" height="37"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                 <state key="normal" title="Start Game">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -27,27 +39,15 @@
                                     <segue destination="FxN-Xv-6Xp" kind="show" id="0dX-K6-VxQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-Xc-Atb">
-                                <rect key="frame" x="54" y="206" width="305" height="40.5"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Find the Side">
-                                        <attributes>
-                                            <font key="NSFont" size="40" name="Copperplate-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nro-om-aCf" firstAttribute="bottom" secondItem="ORt-Fo-05r" secondAttribute="bottom" constant="197" id="7cM-GT-y4b"/>
-                            <constraint firstItem="nro-om-aCf" firstAttribute="trailing" secondItem="ORt-Fo-05r" secondAttribute="trailing" constant="115" id="Vmt-nw-nE3"/>
-                            <constraint firstItem="nro-om-aCf" firstAttribute="trailing" secondItem="z6o-Xc-Atb" secondAttribute="trailing" constant="55" id="dql-2O-6Mw"/>
-                            <constraint firstItem="ORt-Fo-05r" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" constant="115" id="fUy-WV-AMm"/>
+                            <constraint firstItem="nro-om-aCf" firstAttribute="bottom" secondItem="ORt-Fo-05r" secondAttribute="bottom" constant="177" id="8cq-XZ-OR5"/>
+                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" id="A7Q-xz-VIY"/>
+                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="trailing" secondItem="nro-om-aCf" secondAttribute="trailing" id="LwM-3V-bEg"/>
+                            <constraint firstItem="nro-om-aCf" firstAttribute="trailing" secondItem="ORt-Fo-05r" secondAttribute="trailing" constant="105" id="Wys-rn-QaU"/>
+                            <constraint firstItem="ORt-Fo-05r" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" constant="104" id="oMJ-7d-Fuf"/>
                             <constraint firstItem="z6o-Xc-Atb" firstAttribute="top" secondItem="nro-om-aCf" secondAttribute="top" constant="162" id="uib-bt-rl3"/>
-                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" constant="54" id="yBA-FO-AU6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nro-om-aCf"/>
                     </view>
@@ -60,31 +60,21 @@
         <scene sceneID="MJM-Dj-pEN">
             <objects>
                 <viewController id="FxN-Xv-6Xp" customClass="LevelsPage" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="36B-3f-EiZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="view" contentMode="scaleToFill" id="36B-3f-EiZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVELS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnF-TU-VB0">
-                                <rect key="frame" x="129" y="125" width="155" height="32.5"/>
+                                <rect key="frame" x="0.0" y="101" width="375" height="32.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neR-AE-BwY">
-                                <rect key="frame" x="158" y="766" width="97" height="40"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="24"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="q1H-El-qlI" kind="show" id="9NP-F9-BPv"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-Jw-A7H">
-                                <rect key="frame" x="59" y="241" width="296" height="244"/>
+                                <rect key="frame" x="59" y="217" width="257" height="244"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="tTX-hN-3hm">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="257" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8U-iv-sTn">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
@@ -94,42 +84,46 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="vYe-Y8-JFQ"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="e4L-OP-5J3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y6-q5-3Et">
-                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="75.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="2">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="X9d-M8-dOZ"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="MU4-Gn-l6B"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ui-Ck-hIK">
-                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="3">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="IDT-BL-FcI"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="dN9-ui-mGD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-T5-jpf">
-                                                <rect key="frame" x="266" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="227" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="W2z-ff-Tem"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="m5L-Ab-fCe"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="i8i-Qt-Cin">
-                                        <rect key="frame" x="0.0" y="68" width="296" height="40"/>
+                                        <rect key="frame" x="0.0" y="68" width="257" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAk-UT-ja4">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
@@ -139,42 +133,46 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="Yjr-3G-cGi"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="showDetail" id="2fz-2k-1iy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jor-Ju-Wds">
-                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="75.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="6">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="lFi-Jr-OyP"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="qcZ-mJ-pDX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-a8-Tig">
-                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="7">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="Eeh-es-UVa"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="cjR-2a-cez"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sB7-VH-AgR">
-                                                <rect key="frame" x="266" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="227" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="8">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="LgG-1P-B3W"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="Uly-ur-pgz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="ECx-Jb-Aul">
-                                        <rect key="frame" x="0.0" y="136" width="296" height="40"/>
+                                        <rect key="frame" x="0.0" y="136" width="257" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DJ-bW-1lC">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
@@ -184,42 +182,46 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="Lvf-SS-is1"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="rxM-Je-2Fg"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94y-ct-i7k">
-                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="75.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="10">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="R9J-6E-cZQ"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="clt-rx-YlW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-r9-jCN">
-                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="11">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="Lt5-JS-Jn8"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="vdt-DX-W38"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfT-lN-28b">
-                                                <rect key="frame" x="266" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="227" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="12">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="nQ5-Ys-Zt2"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="hl5-Wx-T0V"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-Gb-hiz">
-                                        <rect key="frame" x="0.0" y="204" width="296" height="40"/>
+                                        <rect key="frame" x="0.0" y="204" width="257" height="40"/>
                                         <subviews>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NZ-1i-sEH">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
@@ -229,92 +231,99 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="dUo-zr-R9c"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="7UO-n0-RUf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKE-aY-5L9">
-                                                <rect key="frame" x="88.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="75.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="14">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="Kls-dR-GK8"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="Oqj-D4-YaS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAa-CN-gYK">
-                                                <rect key="frame" x="177.5" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="151.5" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="15">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="lDz-Rg-Ev6"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="b3E-qo-ZSP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7G-tc-82b">
-                                                <rect key="frame" x="266" y="0.0" width="30" height="40"/>
+                                                <rect key="frame" x="227" y="0.0" width="30" height="40"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
                                                 <state key="normal" title="16">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="startSearchQueryWithSender:" destination="FxN-Xv-6Xp" eventType="touchUpInside" id="ckZ-Mj-RDm"/>
+                                                    <segue destination="K2O-Sj-CQC" kind="show" id="azX-ze-zIf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="neR-AE-BwY">
+                                <rect key="frame" x="139" y="574" width="96" height="37"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="q1H-El-qlI" kind="show" id="9NP-F9-BPv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="0K5-BQ-vN7"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="59" id="5AE-5l-IhD"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="width" secondItem="36B-3f-EiZ" secondAttribute="height" multiplier="243:736" id="5lY-Jm-MAQ"/>
-                            <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="129" id="8p9-Da-nef"/>
-                            <constraint firstItem="neR-AE-BwY" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="158" id="Cpw-Pe-EUz"/>
+                            <constraint firstItem="neR-AE-BwY" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="139" id="6Ut-gt-BFv"/>
+                            <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="8p9-Da-nef"/>
+                            <constraint firstItem="KnF-TU-VB0" firstAttribute="trailing" secondItem="mdT-7Q-oEd" secondAttribute="trailing" id="BCy-4k-8oe"/>
+                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="neR-AE-BwY" secondAttribute="trailing" constant="140" id="COe-TQ-rvJ"/>
+                            <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="W84-ge-Nbu"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="bottom" secondItem="neR-AE-BwY" secondAttribute="bottom" constant="56" id="asX-k8-NRS"/>
-                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="KnF-TU-VB0" secondAttribute="trailing" constant="130" id="jin-N9-2Nd"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="top" secondItem="KnF-TU-VB0" secondAttribute="bottom" constant="83.670000000000002" id="kWG-q3-Jhj"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="top" secondItem="mdT-7Q-oEd" secondAttribute="top" constant="81" id="kWo-nz-xO4"/>
-                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="neR-AE-BwY" secondAttribute="trailing" constant="159" id="tji-LR-Tzv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdT-7Q-oEd"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPs-bv-eUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-411.59420289855075" y="-216.84782608695653"/>
+            <point key="canvasLocation" x="-412" y="-217.24137931034485"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Yqb-1p-4Kx">
             <objects>
                 <viewController id="K2O-Sj-CQC" customClass="ViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kiX-m1-3dH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-UP-Z2l">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00N-gd-QiU">
-                                <rect key="frame" x="151" y="66" width="112" height="28"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="0.0" y="42" width="375" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-9b-Vrw">
-                                <rect key="frame" x="161" y="804" width="92" height="38"/>
-                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="22"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="FxN-Xv-6Xp" kind="show" id="QIN-zH-VQS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-a0-Nni">
-                                <rect key="frame" x="98" y="335" width="217" height="45"/>
+                                <rect key="frame" x="98" y="308.5" width="178" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
                                 <state key="normal" title="Try Again">
@@ -322,7 +331,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-Bb-fXr">
-                                <rect key="frame" x="93" y="384" width="228" height="45"/>
+                                <rect key="frame" x="93" y="357.5" width="189" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
                                 <state key="normal" title="Menu">
@@ -330,12 +339,22 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGp-8b-Nm5">
-                                <rect key="frame" x="93" y="335" width="228" height="45"/>
+                                <rect key="frame" x="93" y="308.5" width="189" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
                                 <state key="normal" title="Next Level">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-9b-Vrw">
+                                <rect key="frame" x="153" y="612" width="69" height="35"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="FxN-Xv-6Xp" kind="show" id="QIN-zH-VQS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -344,21 +363,21 @@
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" id="43s-5I-WfI"/>
                             <constraint firstItem="fOx-a0-Nni" firstAttribute="top" secondItem="00N-gd-QiU" secondAttribute="bottom" constant="241" id="G5m-jE-PAa"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="top" secondItem="kiX-m1-3dH" secondAttribute="top" id="GDM-o5-0Pr"/>
+                            <constraint firstItem="00N-gd-QiU" firstAttribute="trailing" secondItem="mqB-qt-snX" secondAttribute="trailing" id="I3K-MO-43r"/>
                             <constraint firstItem="sGp-8b-Nm5" firstAttribute="top" secondItem="00N-gd-QiU" secondAttribute="bottom" constant="241" id="IGQ-OL-QYG"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="Zq0-Bb-fXr" secondAttribute="trailing" constant="93" id="JNK-Gf-wkK"/>
                             <constraint firstItem="00N-gd-QiU" firstAttribute="top" secondItem="mqB-qt-snX" secondAttribute="top" constant="22" id="Jtu-CH-7En"/>
-                            <constraint firstItem="00N-gd-QiU" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="151" id="KUF-bA-f8g"/>
-                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="00N-gd-QiU" secondAttribute="trailing" constant="151" id="Krc-t6-shr"/>
                             <constraint firstItem="sGp-8b-Nm5" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="93" id="LgZ-vY-uhn"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="sGp-8b-Nm5" secondAttribute="trailing" constant="93" id="NpA-u4-zS0"/>
+                            <constraint firstItem="hYs-9b-Vrw" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="153" id="YoE-Px-fAe"/>
                             <constraint firstItem="Zq0-Bb-fXr" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="93" id="bRO-mG-Zlm"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="bottom" secondItem="mqB-qt-snX" secondAttribute="bottom" id="hUO-DG-GLX"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="bottom" secondItem="hYs-9b-Vrw" secondAttribute="bottom" constant="20" id="mQ6-gS-ysI"/>
-                            <constraint firstItem="hYs-9b-Vrw" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="161" id="mfJ-Ny-B3I"/>
+                            <constraint firstItem="00N-gd-QiU" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" id="mTx-M3-4e7"/>
                             <constraint firstItem="fOx-a0-Nni" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="98" id="pOm-Lc-oz1"/>
                             <constraint firstItem="Zq0-Bb-fXr" firstAttribute="top" secondItem="fOx-a0-Nni" secondAttribute="bottom" constant="4" id="pnD-E9-Xp6"/>
-                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="161" id="tId-U5-tYh"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="trailing" secondItem="mqB-qt-snX" secondAttribute="trailing" id="tLr-jI-0Z9"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="153" id="uTI-cH-aYP"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="rPE-UP-Z2l" secondAttribute="trailing" id="y5u-Is-q8Z"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="fOx-a0-Nni" secondAttribute="trailing" constant="99" id="zP3-MD-c1C"/>
                         </constraints>
@@ -374,10 +393,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfa-bM-EDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397.10144927536237" y="-216.96428571428569"/>
+            <point key="canvasLocation" x="396" y="-217.24137931034485"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="7UO-n0-RUf"/>
         <segue reference="QIN-zH-VQS"/>
     </inferredMetricsTieBreakers>
 </document>
