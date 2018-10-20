@@ -18,6 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     let configuration = ARWorldTrackingConfiguration()
     var level = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Set the view's delegate
