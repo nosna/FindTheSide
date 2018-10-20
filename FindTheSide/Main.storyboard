@@ -16,13 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="RcY-WF-Ymk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-Xc-Atb">
+                                <rect key="frame" x="54" y="120" width="266" height="37.5"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nro-om-aCf" firstAttribute="trailing" secondItem="z6o-Xc-Atb" secondAttribute="trailing" constant="55" id="dql-2O-6Mw"/>
+                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="top" secondItem="nro-om-aCf" secondAttribute="top" constant="100" id="uib-bt-rl3"/>
+                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" constant="54" id="yBA-FO-AU6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nro-om-aCf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKR-8T-9hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1186" y="-216"/>
+            <point key="canvasLocation" x="-1186.4000000000001" y="-216.34182908545728"/>
         </scene>
         <!--Levels Page-->
         <scene sceneID="MJM-Dj-pEN">
