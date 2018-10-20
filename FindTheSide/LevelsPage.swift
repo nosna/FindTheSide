@@ -24,17 +24,11 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     */
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             ViewController.highestNum = Int(ViewController.highest.levelNum)
             print("The highest level so far is " + String(ViewController.highest.levelNum))
         }
-=======
-        ViewController.highest = CoreDataHelper.retrieveLevel()!
-        ViewController.highestNum = Int(ViewController.highest.levelNum)
-        print("The highest level so far is " + String(ViewController.highest.levelNum))
->>>>>>> 9f2a66e861b2b8cf510385e0acd72ef7ede3c765
     }
     
     
