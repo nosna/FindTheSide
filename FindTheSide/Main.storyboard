@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sL0-rb-XHd">
 <<<<<<< HEAD
     <device id="retina5_5" orientation="portrait">
+=======
+    <device id="ipad9_7" orientation="portrait">
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
         <adaptation id="fullscreen"/>
     </device>
@@ -22,6 +24,8 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find The Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-1c-Rux">
                                 <rect key="frame" x="62" y="180" width="290" height="38"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find The Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-1c-Rux">
@@ -34,6 +38,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI7-8Z-9X4">
 <<<<<<< HEAD
                                 <rect key="frame" x="115" y="478" width="184" height="40"/>
+=======
+                                <rect key="frame" x="115" y="766" width="538" height="40"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
                                 <state key="normal" title="StartGame">
@@ -338,6 +344,10 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-qP-wQg">
                                 <rect key="frame" x="145" y="108" width="85" height="33"/>
+=======
+                    <view key="view" contentMode="scaleAspectFit" id="V1h-03-sR7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEx-qP-wQg">
                                 <rect key="frame" x="145" y="108" width="544" height="33"/>
@@ -350,6 +360,10 @@
 <<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-8e-g8x">
                                 <rect key="frame" x="111" y="662" width="152" height="37"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-8e-g8x">
+                                <rect key="frame" x="111" y="1038" width="611" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="21"/>
                                 <state key="normal" title="Back to Menu">
@@ -702,6 +716,10 @@
                             <constraint firstItem="fdP-Yf-dpu" firstAttribute="top" secondItem="04I-Cp-CgS" secondAttribute="bottom" constant="27" id="x6k-3P-etU"/>
                             <constraint firstItem="IKe-Kf-kZ5" firstAttribute="bottom" secondItem="BpI-8e-g8x" secondAttribute="bottom" constant="37" id="yI3-QT-3Jm"/>
                             <constraint firstItem="QSq-ez-2vh" firstAttribute="top" secondItem="YEx-qP-wQg" secondAttribute="bottom" constant="61" id="zTV-az-FhD"/>
+=======
+                            <constraint firstAttribute="trailing" secondItem="A15-9d-hA9" secondAttribute="trailing" constant="276" id="5qe-5T-2zW"/>
+                            <constraint firstItem="A15-9d-hA9" firstAttribute="leading" secondItem="IKe-Kf-kZ5" secondAttribute="leading" constant="276" id="OmT-el-dUY"/>
+                            <constraint firstItem="IKe-Kf-kZ5" firstAttribute="trailing" secondItem="A15-9d-hA9" secondAttribute="trailing" constant="275" id="tCD-vb-Hcf"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IKe-Kf-kZ5"/>
@@ -725,6 +743,9 @@
                             </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4t4-Yl-Ye1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-NH-7AR">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
@@ -744,6 +765,8 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-8h-erj">
 <<<<<<< HEAD
                                 <rect key="frame" x="167" y="615" width="80" height="32"/>
+=======
+                                <rect key="frame" x="167" y="362" width="434" height="32"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                                 <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="17"/>
                                 <state key="normal" title="EXIT">
@@ -757,6 +780,8 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZ0-ej-Pdo">
 <<<<<<< HEAD
                                 <rect key="frame" x="92" y="310" width="230" height="47"/>
+=======
+                                <rect key="frame" x="92" y="57" width="584" height="47"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
@@ -767,6 +792,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-0G-PJo">
 <<<<<<< HEAD
                                 <rect key="frame" x="92" y="268" width="230" height="45"/>
+=======
+                                <rect key="frame" x="92" y="268" width="584" height="45"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
@@ -777,6 +804,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFK-9Z-vob">
 <<<<<<< HEAD
                                 <rect key="frame" x="92" y="321" width="230" height="45"/>
+=======
+                                <rect key="frame" x="92" y="321" width="584" height="45"/>
 >>>>>>> 6e2558e4d47eb11d6d4b5b2f353f9e68ae0f649b
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="28"/>
