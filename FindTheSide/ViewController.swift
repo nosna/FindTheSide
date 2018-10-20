@@ -98,8 +98,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.scene.rootNode.addChildNode(cubeNode)
             
             if cube == spCube {
-                let sideNode = SCNNode(geometry: SCNBox(width: 0.99, height: 0.99, length: 0.99, chamferRadius: 0.01))
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.099, height: 0.099, length: 0.099, chamferRadius: 0.001))
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+                sideNode.position = SCNVector3()
                 cubeNode.addChildNode(sideNode)
             }
         }
