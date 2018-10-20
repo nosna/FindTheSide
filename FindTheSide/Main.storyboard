@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PWU-yH-tVR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -376,7 +376,7 @@
         <!--View Controller-->
         <scene sceneID="c2c-1p-eZw">
             <objects>
-                <viewController id="PWU-yH-tVR" sceneMemberID="viewController">
+                <viewController id="PWU-yH-tVR" customClass="ViewController" customModule="FindTheSide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cca-5R-3bQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,6 +455,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tKj-m2-Xv7"/>
                     </view>
+                    <connections>
+                        <outlet property="sceneView" destination="cQm-NH-7AR" id="6qn-yk-3gd"/>
+                        <outlet property="timer" destination="4t4-Yl-Ye1" id="jyO-Oj-FOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CzF-zd-AhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
