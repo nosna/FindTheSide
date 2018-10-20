@@ -13,8 +13,6 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
-    //hello!!!!!!!!
-    //wby
     
     //time
     var time: Timer!
