@@ -15,33 +15,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     //hello!!!!!!!!
     //wby
-    //yoyoyo
-    
-    //timer
-    var time: Timer!
-    var countdown:Int = 60
-    @IBOutlet weak var timer: UILabel!
-    
-    @objc
-    func countdownAction() {
-        countdown -= 1
-        if countdown == 0 {
-            time.invalidate()
-            timer.text = "Time out!"
-        } else {
-            timer.text = "\(countdown)"
-        }
-        
-    }
-    
-    //
     
     let configuration = ARWorldTrackingConfiguration()
-    var level = 1
+    
     override func viewDidLoad() {
-        //timer
-        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)
-        //
         super.viewDidLoad()
         // Set the view's delegate
         sceneView.delegate = self
@@ -82,22 +59,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // MARK: - ARSCNViewDelegate
     
-    func generateCubes() {
+    @IBAction func mua(_ sender: Any) {
+        //        let heartNode = SCNNode()
+        //        heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0.03)
+        //        heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
+        //        heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
         
-        for lvl in 1 ... level {
-            let heartNode = SCNNode()
-            heartNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-            heartNode.geometry?.firstMaterial?.specular.contents = UIColor.white
-            heartNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-            
-            let x = Float.random(in: -0.3 ... 0.3)
-            let y = Float.random(in: -0.3 ... 0.3)
-            let z = Float.random(in: -0.5 ... 0)
-            heartNode.position = SCNVector3(x, y, z)
-            
-            sceneView.scene.rootNode.addChildNode(heartNode)
+        let heartScene = SCNScene(named: "art.scnassets/heart.scn")!
+        guard let heartNode = heartScene.rootNode.childNode(withName: "heart", recursively: true) else {
+            return
         }
-        
+        let x = Float.random(in: -0.3 ... 0.3)
+        let y = Float.random(in: -0.3 ... 0.3)
+        let z = Float.random(in: -0.5 ... 0)
+        heartNode.position = SCNVector3(x, y, z)
         
         //        let wrapperNode = SCNNode()
         //        for child in heartScene.rootNode.childNodes {
@@ -106,7 +81,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //        }
         //        heartNode.addChildNode(wrapperNode)
         
-        
+        sceneView.scene.rootNode.addChildNode(heartNode)
     }
     
     @IBAction func reset(_ sender: Any) {
