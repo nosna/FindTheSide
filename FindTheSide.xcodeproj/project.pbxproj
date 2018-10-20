@@ -15,6 +15,9 @@
 		3ED00100217AE84C0014AC89 /* FindTheSideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED000FF217AE84C0014AC89 /* FindTheSideTests.swift */; };
 		3ED0010B217AE84D0014AC89 /* FindTheSideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0010A217AE84D0014AC89 /* FindTheSideUITests.swift */; };
 		953D4AD1217B03830052EC3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953D4AD0217B03830052EC3C /* Main.storyboard */; };
+		95D3D186217B1ADE00E5D1E2 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3D185217B1ADE00E5D1E2 /* WelcomePageViewController.swift */; };
+		95D3D189217B1B2700E5D1E2 /* LevelsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D3D187217B1B2700E5D1E2 /* LevelsPage.swift */; };
+		95D3D18A217B1B2700E5D1E2 /* LevelsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D3D188217B1B2700E5D1E2 /* LevelsPage.xib */; };
 		BA7F1E84217B051A00907CE8 /* FindTheSide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA7F1E82217B051A00907CE8 /* FindTheSide.xcdatamodeld */; };
 		BAF1BA34217AF41000DA8AED /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1BA33217AF41000DA8AED /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		3ED0010A217AE84D0014AC89 /* FindTheSideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTheSideUITests.swift; sourceTree = "<group>"; };
 		3ED0010C217AE84D0014AC89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		953D4AD0217B03830052EC3C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		95D3D185217B1ADE00E5D1E2 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		95D3D187217B1B2700E5D1E2 /* LevelsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsPage.swift; sourceTree = "<group>"; };
+		95D3D188217B1B2700E5D1E2 /* LevelsPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelsPage.xib; sourceTree = "<group>"; };
 		BA7F1E83217B051A00907CE8 /* FindTheSide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FindTheSide.xcdatamodel; sourceTree = "<group>"; };
 		BAF1BA33217AF41000DA8AED /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,8 +112,11 @@
 			children = (
 				3ED000E8217AE8450014AC89 /* AppDelegate.swift */,
 				3ED000EA217AE8450014AC89 /* art.scnassets */,
-				3ED000EC217AE8450014AC89 /* ViewController.swift */,
 				953D4AD0217B03830052EC3C /* Main.storyboard */,
+				95D3D185217B1ADE00E5D1E2 /* WelcomePageViewController.swift */,
+				95D3D187217B1B2700E5D1E2 /* LevelsPage.swift */,
+				95D3D188217B1B2700E5D1E2 /* LevelsPage.xib */,
+				3ED000EC217AE8450014AC89 /* ViewController.swift */,
 				BAF1BA33217AF41000DA8AED /* CoreDataHelper.swift */,
 				3ED000F1217AE84C0014AC89 /* Assets.xcassets */,
 				3ED000F3217AE84C0014AC89 /* LaunchScreen.storyboard */,
@@ -242,6 +251,7 @@
 				3ED000F5217AE84C0014AC89 /* LaunchScreen.storyboard in Resources */,
 				3ED000F2217AE84C0014AC89 /* Assets.xcassets in Resources */,
 				953D4AD1217B03830052EC3C /* Main.storyboard in Resources */,
+				95D3D18A217B1B2700E5D1E2 /* LevelsPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +279,9 @@
 				BAF1BA34217AF41000DA8AED /* CoreDataHelper.swift in Sources */,
 				3ED000ED217AE8450014AC89 /* ViewController.swift in Sources */,
 				3ED000E9217AE8450014AC89 /* AppDelegate.swift in Sources */,
+				95D3D189217B1B2700E5D1E2 /* LevelsPage.swift in Sources */,
 				BA7F1E84217B051A00907CE8 /* FindTheSide.xcdatamodeld in Sources */,
+				95D3D186217B1ADE00E5D1E2 /* WelcomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
