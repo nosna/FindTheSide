@@ -210,6 +210,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-UP-Z2l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00N-gd-QiU">
                                 <rect key="frame" x="151" y="42" width="73" height="28"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="24"/>
@@ -223,22 +227,44 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOx-a0-Nni">
+                                <rect key="frame" x="98" y="311" width="178" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGp-8b-Nm5">
+                                <rect key="frame" x="93" y="311" width="189" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <state key="normal" title="Next Level">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fOx-a0-Nni" firstAttribute="top" secondItem="00N-gd-QiU" secondAttribute="bottom" constant="241" id="G5m-jE-PAa"/>
+                            <constraint firstItem="sGp-8b-Nm5" firstAttribute="top" secondItem="00N-gd-QiU" secondAttribute="bottom" constant="241" id="IGQ-OL-QYG"/>
                             <constraint firstItem="00N-gd-QiU" firstAttribute="top" secondItem="mqB-qt-snX" secondAttribute="top" constant="22" id="Jtu-CH-7En"/>
                             <constraint firstItem="00N-gd-QiU" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="151" id="KUF-bA-f8g"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="00N-gd-QiU" secondAttribute="trailing" constant="151" id="Krc-t6-shr"/>
+                            <constraint firstItem="sGp-8b-Nm5" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="93" id="LgZ-vY-uhn"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="sGp-8b-Nm5" secondAttribute="trailing" constant="93" id="NpA-u4-zS0"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="bottom" secondItem="hYs-9b-Vrw" secondAttribute="bottom" constant="20" id="mQ6-gS-ysI"/>
                             <constraint firstItem="hYs-9b-Vrw" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="161" id="mfJ-Ny-B3I"/>
+                            <constraint firstItem="fOx-a0-Nni" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="98" id="pOm-Lc-oz1"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="161" id="tId-U5-tYh"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="fOx-a0-Nni" secondAttribute="trailing" constant="99" id="zP3-MD-c1C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mqB-qt-snX"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfa-bM-EDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="-216"/>
+            <point key="canvasLocation" x="397.60000000000002" y="-216.34182908545728"/>
         </scene>
     </scenes>
 </document>
