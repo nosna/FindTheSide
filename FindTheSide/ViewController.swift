@@ -63,6 +63,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         menu.isEnabled = false;
         tryAgain.isEnabled = false;
         generateCubes()
+        session(ARSession, didUpdate: ARFrame)
     }
     
     //MARK: ARView
