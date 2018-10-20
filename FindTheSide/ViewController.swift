@@ -38,7 +38,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     
     let configuration = ARWorldTrackingConfiguration()
-    var level = 1
+    var level = 2
     
     override func viewDidLoad() {
         
@@ -47,7 +47,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //
         super.viewDidLoad()
         // Set the view's delegate
-        sceneView.delegate = self
+//        sceneView.delegate = self
         //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         // 
         // Set the scene to the view
@@ -55,6 +55,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //        sceneView.session.run(configuration)
         sceneView.autoenablesDefaultLighting = true
         //
+        generateCubes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -86,7 +87,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         for cube in 1 ... level {
             let cubeNode = SCNNode()
-            cubeNode.geometry = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
+            cubeNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
             cubeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
             
@@ -101,15 +102,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 let nums = [0.002, -0.002]
                 let spNum = nums.randomElement()
                 
+                guard let unwrappedAttitude = attitude else {
+                    fatalError("attitude was nil!")
+                }
+                spNum = Float(unwrappedAttitude.spNum)
+                
                 var i = Float()
                 var j = Float()
                 var k = Float()
                 var cds = [i,j,k]
                 let spCd = Int.random(in: 0...2)
-                cds[spCd] += Float(spNum!)
-                let sideNode = SCNNode(geometry: SCNBox(width: 0.099, height: 0.099, length: 0.099, chamferRadius: 0.001))
+                cds[spCd] += spNum
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.049, height: 0.049, length: 0.049, chamferRadius: 0.001))
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
                 sideNode.position = SCNVector3(i,j,k)
+                print(i, j, k)
                 cubeNode.addChildNode(sideNode)
             }
         }
