@@ -17,8 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORt-Fo-05r">
+                                <rect key="frame" x="115" y="430" width="145" height="40"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="24"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6o-Xc-Atb">
-                                <rect key="frame" x="54" y="120" width="266" height="37.5"/>
+                                <rect key="frame" x="54" y="182" width="266" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,8 +33,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nro-om-aCf" firstAttribute="bottom" secondItem="ORt-Fo-05r" secondAttribute="bottom" constant="197" id="7cM-GT-y4b"/>
+                            <constraint firstItem="nro-om-aCf" firstAttribute="trailing" secondItem="ORt-Fo-05r" secondAttribute="trailing" constant="115" id="Vmt-nw-nE3"/>
                             <constraint firstItem="nro-om-aCf" firstAttribute="trailing" secondItem="z6o-Xc-Atb" secondAttribute="trailing" constant="55" id="dql-2O-6Mw"/>
-                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="top" secondItem="nro-om-aCf" secondAttribute="top" constant="100" id="uib-bt-rl3"/>
+                            <constraint firstItem="ORt-Fo-05r" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" constant="115" id="fUy-WV-AMm"/>
+                            <constraint firstItem="z6o-Xc-Atb" firstAttribute="top" secondItem="nro-om-aCf" secondAttribute="top" constant="162" id="uib-bt-rl3"/>
                             <constraint firstItem="z6o-Xc-Atb" firstAttribute="leading" secondItem="nro-om-aCf" secondAttribute="leading" constant="54" id="yBA-FO-AU6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nro-om-aCf"/>
