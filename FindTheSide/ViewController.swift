@@ -14,6 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     //hello!!!!!!!!
+    //wby
     
     let configuration = ARWorldTrackingConfiguration()
     
