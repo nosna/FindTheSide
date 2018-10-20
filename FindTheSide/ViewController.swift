@@ -152,6 +152,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset()
         nextLevel.isEnabled = true
         menu.isEnabled = true
+       // var currentHighest =
         CoreDataHelper.createLevel(num: <#T##Int64#>)
     }
     
