@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindTheSide/WelcomePageViewController.swift"
-            timestampString = "561742183.423282"
+            timestampString = "561788515.212948"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "WelcomePageViewController"
             landmarkType = "3">
          </BreakpointContent>
