@@ -93,7 +93,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func generateCubes() {
-        let spCube = Int.random(in: 1...level)
+        let spCube = Int.random(in: 1...(2 * level + 1))
         
         for cube in 1 ... (2 * level + 1) {
             let cubeNode = SCNNode()
@@ -181,16 +181,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
         DispatchQueue.main.async {
-            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x ||
-                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
+            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
+                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
                 self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
                 self.gameIsWon()
             } else { 
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
-                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) ||
-                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) ||
+                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) &&
+                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
                         (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
                         self.gameIsLost()
                     }
