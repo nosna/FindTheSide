@@ -169,7 +169,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset(judge: false, worl: false)
         self.nextLevel.isHidden = false
         self.menu.isHidden = false
-        ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
+        //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             let highNum = ViewController.highest.levelNum
             if(level > Int(highNum)) {
