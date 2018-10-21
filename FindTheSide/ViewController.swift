@@ -59,6 +59,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         //        sceneView.scene = scene
         //        sceneView.session.run(configuration)
+        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin]
         sceneView.autoenablesDefaultLighting = true
         //
         nextLevel.isHidden = true
