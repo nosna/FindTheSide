@@ -29,6 +29,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         isFirst = true
     }
     
+    @IBAction func restart(_ sender: UIButton) {
+        reset(judge:true, worl:true)
+        isFirst = true
+    }
+    
     //time
     var time: Timer!
     var countdown:Int = 60
