@@ -25,6 +25,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var otherCubes: [SCNVector3] = []
     var level = 9
     var isFirst = true
+    var isWon = false
     @IBOutlet weak var timer: UILabel!
     
 
