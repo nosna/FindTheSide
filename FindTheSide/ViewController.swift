@@ -202,7 +202,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 node.removeFromParentNode()
             }
         }
-        sceneView.scene.rootNode.addChildNode(node)
+        self.sceneView.scene.rootNode.addChildNode(node)
         
         DispatchQueue.main.async {
             print("here")
