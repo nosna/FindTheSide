@@ -15,10 +15,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBAction func nxt(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func rst(_ sender: Any) {
+    }
+    
     //time
     var time: Timer!
     var countdown:Int = 60
-    let configuration = ARWorldTrackingConfiguration()
+    let configuration = ARWorldTrackingConfigurati on()
     static var highest: Level!
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)

@@ -272,6 +272,7 @@
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="59" id="5AE-5l-IhD"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="width" secondItem="36B-3f-EiZ" secondAttribute="height" multiplier="243:736" id="5lY-Jm-MAQ"/>
                             <constraint firstItem="neR-AE-BwY" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="139" id="6Ut-gt-BFv"/>
+                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="7rw-iP-dtr"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="8p9-Da-nef"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="trailing" secondItem="mdT-7Q-oEd" secondAttribute="trailing" id="BCy-4k-8oe"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="neR-AE-BwY" secondAttribute="trailing" constant="140" id="COe-TQ-rvJ"/>
@@ -313,6 +314,9 @@
                                 <state key="normal" title="Try Again">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="rst:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="YCu-wO-V8k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zq0-Bb-fXr">
                                 <rect key="frame" x="93" y="357.5" width="189" height="45"/>
@@ -321,14 +325,9 @@
                                 <state key="normal" title="Menu">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGp-8b-Nm5">
-                                <rect key="frame" x="93" y="308.5" width="189" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
-                                <state key="normal" title="Next Level">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <connections>
+                                    <segue destination="FxN-Xv-6Xp" kind="show" id="u42-ou-5dL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-9b-Vrw">
                                 <rect key="frame" x="153" y="612" width="69" height="35"/>
@@ -338,6 +337,17 @@
                                 </state>
                                 <connections>
                                     <segue destination="FxN-Xv-6Xp" kind="show" id="QIN-zH-VQS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGp-8b-Nm5">
+                                <rect key="frame" x="93" y="308.5" width="189" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
+                                <state key="normal" title="Next Level">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nxt:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="H56-wI-jkW"/>
                                 </connections>
                             </button>
                         </subviews>
