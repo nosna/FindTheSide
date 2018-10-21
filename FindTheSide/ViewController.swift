@@ -181,6 +181,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
         DispatchQueue.main.async {
+            print("here")
+            print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
+            print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
             if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
                 self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
                 self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
@@ -201,8 +204,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
         
-        
-//        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
