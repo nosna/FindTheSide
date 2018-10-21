@@ -34,16 +34,10 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     }
     
 
-    @IBAction func startSearchQuery(sender: AnyObject) {
-        let button = sender as! UIButton
-        LevelsPage.tag = button.tag
-        print("the tag of the button is " + String(LevelsPage.tag))
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         var secondController = segue.destination as! ViewController
-        secondController.level = LevelsPage.tag
-        
-        
+        let button = sender as! UIButton
+        secondController.level = button.tag
+        print("I'm in segue")
     }
 }
