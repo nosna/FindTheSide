@@ -166,7 +166,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     //MARK: - Game Result
     func gameIsWon(){
-        reset(judge: false, worl: false)
+        reset(judge: false, worl: true)
         self.nextLevel.isHidden = false
         self.menu.isHidden = false
         //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
@@ -184,7 +184,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func gameIsLost(){
-        reset(judge: false, worl: true)
+        reset(judge: false, worl: false)
         tryAgain.isHidden = true
         isFirst = true
     }
