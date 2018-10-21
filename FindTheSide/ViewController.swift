@@ -245,13 +245,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 print("touched sp")
                 if(ViewController.highest != nil){
                     //var highNum = ViewController.highest.levelNum
-                    if(level > ViewController.highestNum) {
-                        CoreDataHelper.createLevel(num: Int64(level))
+                    if(self.level > ViewController.highestNum) {
+                        CoreDataHelper.createLevel(num: Int64(self.level))
                         CoreDataHelper.deleteLevel(level: ViewController.highest)
-                        ViewController.highestNum = level
+                        ViewController.highestNum = self.level
                     }
                 } else {
-                    CoreDataHelper.createLevel(num: Int64(level))
+                    CoreDataHelper.createLevel(num: Int64(self.level))
                 }
                 self.nextLevel.isHidden = false
                 self.menu.isHidden = false
