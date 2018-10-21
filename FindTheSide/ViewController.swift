@@ -243,6 +243,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.spCubeLoc.z-0.03 ... self.spCubeLoc.z+0.03 ~= currentCameraLocation.z {
                 
                 print("touched sp")
+                if(ViewController.highest != nil){
+                    //var highNum = ViewController.highest.levelNum
+                    if(level > ViewController.highestNum) {
+                        CoreDataHelper.createLevel(num: Int64(level))
+                        CoreDataHelper.deleteLevel(level: ViewController.highest)
+                        ViewController.highestNum = level
+                    }
+                } else {
+                    CoreDataHelper.createLevel(num: Int64(level))
+                }
                 self.nextLevel.isHidden = false
                 self.menu.isHidden = false
             } else {
