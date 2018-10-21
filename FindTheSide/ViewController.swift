@@ -25,7 +25,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //time
     var time: Timer!
     var countdown:Int = 60
-    let configuration = ARWorldTrackingConfigurati on()
+    let configuration = ARWorldTrackingConfiguration()
     static var highest: Level!
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
@@ -196,7 +196,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 node.removeFromParentNode()
             }
         }
-        sceneView.scene.rootNode.addChildNode(node)
+        self.sceneView.scene.rootNode.addChildNode(node)
         
         DispatchQueue.main.async {
             print("here")
