@@ -25,8 +25,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var otherCubes: [SCNVector3] = []
     var level = 9
     var isFirst = true
+    var isWon = false
     @IBOutlet weak var timer: UILabel!
     
+
     @objc
     func countdownAction() {
         countdown -= 1
@@ -36,10 +38,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         } else {
             timer.text = "\(countdown)"
         }
-        
     }
-    //
-    
+
     
     @IBOutlet weak var tryAgain: UIButton!
     @IBOutlet weak var nextLevel: UIButton!
@@ -93,7 +93,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ARSCNViewDelegate
     
     func generateCubes() {
-        let spCube = Int.random(in: 1...level)
+        let spCube = Int.random(in: 1...(2 * level + 1))
         
         for cube in 1 ... (2 * level + 1) {
             let cubeNode = SCNNode()
@@ -143,8 +143,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //MARK: - Game Result
     func gameIsWon(){
         reset()
-        nextLevel.isHidden = false
-        menu.isHidden = false
+        self.nextLevel.isHidden = false
+        self.menu.isHidden = false
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             let highNum = ViewController.highest.levelNum
@@ -170,42 +170,50 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             generateCubes()
             isFirst = false
         }
+        
         guard let pointOfView = sceneView.pointOfView else {
             return
         }
+        
         let transform = pointOfView.transform
         let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
-        if spCubeLoc.x-0.025 ... spCubeLoc.x+0.025 ~= currentCameraLocation.x ||
-            spCubeLoc.y-0.025 ... spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
-            spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentCameraLocation.z {
-            gameIsWon()
-        } else {
-            print(level)
-            for cube in 0...otherCubes.count - 1 {
-                if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentCameraLocation.x ||
-                    otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentCameraLocation.y ||
-                    otherCubes[cube].z-0.025 ... otherCubes[cube].z+0.025 ~= currentCameraLocation.z {
-                    gameIsLost()
+//        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
+        DispatchQueue.main.async {
+            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
+                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
+                self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
+                self.gameIsWon()
+            } else { 
+                //            print(level)
+                for cube in 0...self.otherCubes.count - 1 {
+//                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
+                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) &&
+                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
+                        (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
+                        self.gameIsLost()
+                    }
                 }
             }
         }
-        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
+        
+        
+//        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
     }
     
-//    func session(_ session: ARSession, didFailWithError error: Error) {
-//        // Present an error message to the user
-//
-//    }
-//
-//    func sessionWasInterrupted(_ session: ARSession) {
-//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-//
-//    }
-//
-//    func sessionInterruptionEnded(_ session: ARSession) {
-//        // Reset tracking and/or remove existing anchors if consistent tracking is required
-//
-//    }
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        // Present an error message to the user
+
+    }
+
+    func sessionWasInterrupted(_ session: ARSession) {
+        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+
+    }
+
+    func sessionInterruptionEnded(_ session: ARSession) {
+        // Reset tracking and/or remove existing anchors if consistent tracking is required
+
+    }
 }
