@@ -43,7 +43,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var level = 0
     var isFirst = true
     var isWon = false
-    var node: SCNNode!
+    var beeNode: SCNNode!
     @IBOutlet weak var timer: UILabel!
     
 
@@ -219,14 +219,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             print("here")
             if self.isFirst {
+//                let beeScene = SCNScene(named: "art.scnassets/bee.scn")!
+//                self.beeNode = beeScene.rootNode.childNode(withName: "bee", recursively: true)
                 var ballShape = SCNSphere(radius: 0.1)
-                self.node = SCNNode(geometry: ballShape)
-                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
-                self.node.position = currentCameraLocation
-                self.sceneView.scene.rootNode.addChildNode(self.node)
+                self.beeNode = SCNNode(geometry: ballShape)
+                self.beeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+                self.beeNode.position = currentCameraLocation
+                self.sceneView.scene.rootNode.addChildNode(self.beeNode)
                 self.isFirst = false
             } else {
-                self.node.position = currentCameraLocation
+                self.beeNode.position = currentCameraLocation
             }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)

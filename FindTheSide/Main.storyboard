@@ -286,7 +286,7 @@
                         <outlet property="eight" destination="sB7-VH-AgR" id="EI9-zV-dkJ"/>
                         <outlet property="eleven" destination="NCQ-r9-jCN" id="Mma-2M-7EG"/>
                         <outlet property="fifteen" destination="yAa-CN-gYK" id="OpC-nc-ZbP"/>
-                        <outlet property="fiv" destination="hAk-UT-ja4" id="r8r-LC-ATW"/>
+                        <outlet property="five" destination="hAk-UT-ja4" id="8dP-mP-iJy"/>
                         <outlet property="four" destination="Nqk-T5-jpf" id="b0e-9K-hPp"/>
                         <outlet property="fourteen" destination="QKE-aY-5L9" id="Qnh-7r-P55"/>
                         <outlet property="nine" destination="7DJ-bW-1lC" id="z2Y-SS-ndl"/>
@@ -313,6 +313,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-UP-Z2l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00N-gd-QiU">
                                 <rect key="frame" x="0.0" y="42" width="375" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
@@ -378,9 +381,6 @@
                                     <action selector="restart:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="RGj-6w-vH5"/>
                                 </connections>
                             </button>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-UP-Z2l">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -425,7 +425,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="m5L-Ab-fCe"/>
-        <segue reference="QIN-zH-VQS"/>
+        <segue reference="clt-rx-YlW"/>
+        <segue reference="0dX-K6-VxQ"/>
     </inferredMetricsTieBreakers>
 </document>
