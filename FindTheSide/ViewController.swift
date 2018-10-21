@@ -19,6 +19,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset(judge:true, worl:true)
         level += 1
         isFirst = true
+        nextLevel.isHidden = false
+        menu.isHidden = false
     }
     
     
@@ -122,7 +124,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             sceneView.scene.rootNode.addChildNode(cubeNode)
             
             if cube == spCube {
-                let vecs = [SCNVector3(0.002,0,0),SCNVector3(-0.002,0,0),SCNVector3(0,0.002,0),SCNVector3(0,-0.002,0),SCNVector3(0,0,0.002),SCNVector3(0,0,-0.002)]
+                let vecs = [SCNVector3(0.001,0,0),SCNVector3(-0.001,0,0),SCNVector3(0,0.001,0),SCNVector3(0,-0.001,0),SCNVector3(0,0,0.001),SCNVector3(0,0,-0.001)]
                 let spSide = vecs.randomElement()
                 let sideNode = SCNNode(geometry: SCNBox(width: 0.079, height: 0.079, length: 0.079, chamferRadius: 0.001))
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
