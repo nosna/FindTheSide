@@ -10,7 +10,6 @@ import UIKit
 import SceneKit
 import ARKit
 
-var level: Int = 10
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
@@ -24,7 +23,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
     var otherCubes: [SCNVector3] = []
-    
+    var level = 9
+
     @IBOutlet weak var timer: UILabel!
     
     @objc
