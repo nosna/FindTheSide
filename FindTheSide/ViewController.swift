@@ -16,23 +16,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     @IBAction func nxt(_ sender: UIButton) {
+        reset()
+        level += 1
+        isFirst = true
     }
     
     
     @IBAction func rst(_ sender: Any) {
+        reset()
+        isFirst = true
     }
     
     //time
     var time: Timer!
     var countdown:Int = 60
-    let configuration = ARWorldTrackingConfigurati on()
+    let configuration = ARWorldTrackingConfiguration()
     static var highest: Level!
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
     var otherCubes: [SCNVector3] = []
-    var level = 9
+    var level = 0
     var isFirst = true
     var isWon = false
+    var node: SCNNode!
     @IBOutlet weak var timer: UILabel!
     
 
@@ -175,7 +181,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
         if isFirst {
             generateCubes()
-            isFirst = false
         }
         
         guard let pointOfView = sceneView.pointOfView else {
@@ -186,20 +191,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
+        
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
-        var ballShape = SCNSphere(radius: 0.01)
-        var node = SCNNode(geometry: ballShape)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
-        node.position = currentCameraLocation
-        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
-            if node.geometry is SCNSphere {
-                node.removeFromParentNode()
-            }
-        }
-        sceneView.scene.rootNode.addChildNode(node)
+//        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
+//            if node.geometry is SCNSphere {
+//                node.removeFromParentNode()
+//            }
+//        }
+        
         
         DispatchQueue.main.async {
             print("here")
+            if self.isFirst {
+                var ballShape = SCNSphere(radius: 0.1)
+                self.node = SCNNode(geometry: ballShape)
+                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+                self.node.position = currentCameraLocation
+                self.sceneView.scene.rootNode.addChildNode(self.node)
+                self.isFirst = false
+            } else {
+                self.node.position = currentCameraLocation
+            }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
             if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
