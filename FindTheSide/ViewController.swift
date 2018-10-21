@@ -16,14 +16,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     @IBAction func nxt(_ sender: UIButton) {
-        reset()
+        reset(judge:true, worl:true)
         level += 1
         isFirst = true
     }
     
     
     @IBAction func rst(_ sender: Any) {
-        reset()
+        reset(judge:true, worl:true)
         isFirst = true
     }
     
@@ -46,7 +46,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         countdown -= 1
         if countdown == 0 {
             time.invalidate()
-            timer.text = "Time out!"
+            gameIsLost()
         } else {
             timer.text = "\(countdown)"
         }
@@ -139,7 +139,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        restartSession()
 //    }
     
-    func reset(){
+    func reset(judge:Bool, worl:Bool){
         sceneView.session.pause()
         self.sceneView.scene.rootNode.enumerateChildNodes{
             (node,_) in
@@ -147,14 +147,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
         self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     
+        if judge == true {
         //timer
-        countdown = 60
-        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+          countdown = 60
+          time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+        } else if judge == false{
+            if worl == true {
+                time.invalidate()
+                timer.text = "You Win"
+            } else {
+                time.invalidate()
+                timer.text = "You Lose"
+            }
+            
         }
+    }
     
     //MARK: - Game Result
     func gameIsWon(){
-        reset()
+        reset(judge: false, worl: false)
         self.nextLevel.isHidden = false
         self.menu.isHidden = false
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
@@ -172,7 +183,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func gameIsLost(){
-        reset()
+        reset(judge: false, worl: true)
         tryAgain.isHidden = true
         isFirst = true
     }
