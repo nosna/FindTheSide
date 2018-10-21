@@ -255,23 +255,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zs-EY-jp5">
-                                <rect key="frame" x="0.0" y="590.5" width="375" height="24.5"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="0K5-BQ-vN7"/>
-                            <constraint firstItem="7zs-EY-jp5" firstAttribute="trailing" secondItem="mdT-7Q-oEd" secondAttribute="trailing" id="2Xj-4W-Ycq"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="59" id="5AE-5l-IhD"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="7rw-iP-dtr"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="8p9-Da-nef"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="trailing" secondItem="mdT-7Q-oEd" secondAttribute="trailing" id="BCy-4k-8oe"/>
-                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="bottom" secondItem="7zs-EY-jp5" secondAttribute="bottom" constant="52" id="Gml-BW-44g"/>
-                            <constraint firstItem="7zs-EY-jp5" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="N4b-CR-Sid"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="W84-ge-Nbu"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="top" secondItem="KnF-TU-VB0" secondAttribute="bottom" constant="83.670000000000002" id="kWG-q3-Jhj"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="top" secondItem="mdT-7Q-oEd" secondAttribute="top" constant="81" id="kWo-nz-xO4"/>
