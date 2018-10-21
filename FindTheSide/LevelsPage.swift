@@ -53,13 +53,14 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
         }
         print("The highest level so far is " + String(ViewController.highest.levelNum))
         for num in ViewController.highestNum+1...15 {
+            print("im here")
             b[num].titleLabel!.textColor = UIColor.white
         }
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        var secondController = segue.destination as! ViewController
+        let secondController = segue.destination as! ViewController
         let button = sender as! UIButton
         secondController.level = button.tag
         print("I'm in segue")
