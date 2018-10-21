@@ -59,7 +59,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         //        sceneView.scene = scene
         //        sceneView.session.run(configuration)
-        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin]
         sceneView.autoenablesDefaultLighting = true
         //
         nextLevel.isHidden = true
@@ -181,6 +180,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
+        var ballShape = SCNSphere(radius: 0.01)
+        var node = SCNNode(geometry: ballShape)
+        node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+        node.position = currentCameraLocation
+        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
+            if node.geometry is SCNSphere {
+                node.removeFromParentNode()
+            }
+        }
+        sceneView.scene.rootNode.addChildNode(node)
+        
         DispatchQueue.main.async {
             print("here")
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
