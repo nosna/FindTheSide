@@ -27,6 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var isFirst = true
     @IBOutlet weak var timer: UILabel!
     
+
     @objc
     func countdownAction() {
         countdown -= 1
@@ -36,10 +37,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         } else {
             timer.text = "\(countdown)"
         }
-        
     }
-    //
-    
+
     
     @IBOutlet weak var tryAgain: UIButton!
     @IBOutlet weak var nextLevel: UIButton!
@@ -143,8 +142,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //MARK: - Game Result
     func gameIsWon(){
         reset()
-        nextLevel.isHidden = false
-        menu.isHidden = false
+        self.nextLevel.isHidden = false
+        self.menu.isHidden = false
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             let highNum = ViewController.highest.levelNum
@@ -170,20 +169,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             generateCubes()
             isFirst = false
         }
+        
         guard let pointOfView = sceneView.pointOfView else {
             return
         }
+        
         let transform = pointOfView.transform
         let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
+//        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
         if spCubeLoc.x-0.025 ... spCubeLoc.x+0.025 ~= currentCameraLocation.x ||
             spCubeLoc.y-0.025 ... spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
             spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentCameraLocation.z {
             gameIsWon()
         } else {
-            print(level)
+//            print(level)
             for cube in 0...otherCubes.count - 1 {
+                print(otherCubes[cube].x, otherCubes[cube].y, otherCubes[cube].z)
                 if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentCameraLocation.x ||
                     otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentCameraLocation.y ||
                     otherCubes[cube].z-0.025 ... otherCubes[cube].z+0.025 ~= currentCameraLocation.z {
@@ -191,21 +194,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 }
             }
         }
-        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
+        
+//        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
     }
     
-//    func session(_ session: ARSession, didFailWithError error: Error) {
-//        // Present an error message to the user
-//
-//    }
-//
-//    func sessionWasInterrupted(_ session: ARSession) {
-//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-//
-//    }
-//
-//    func sessionInterruptionEnded(_ session: ARSession) {
-//        // Reset tracking and/or remove existing anchors if consistent tracking is required
-//
-//    }
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        // Present an error message to the user
+
+    }
+
+    func sessionWasInterrupted(_ session: ARSession) {
+        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+
+    }
+
+    func sessionInterruptionEnded(_ session: ARSession) {
+        // Reset tracking and/or remove existing anchors if consistent tracking is required
+
+    }
 }
