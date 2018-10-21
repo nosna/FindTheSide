@@ -18,7 +18,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //time
     var time: Timer!
     var countdown:Int = 60
-    let configuration = ARWorldTrackingConfiguration()
+    let configuration = ARWorldTrackingConfigurati on()
     static var highest: Level!
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
