@@ -181,7 +181,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
         if isFirst {
             generateCubes()
-            isFirst = false
         }
         
         guard let pointOfView = sceneView.pointOfView else {
@@ -209,6 +208,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
                 self.node.position = currentCameraLocation
                 self.sceneView.scene.rootNode.addChildNode(self.node)
+                self.isFirst = false
             } else {
                 self.node.position = currentCameraLocation
             }
