@@ -19,8 +19,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset(judge:true, worl:true)
         level += 1
         isFirst = true
-        nextLevel.isHidden = false
-        menu.isHidden = false
+        nextLevel.isHidden = true
+        menu.isHidden = true
     }
     
     
@@ -126,7 +126,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if cube == spCube {
                 let vecs = [SCNVector3(0.001,0,0),SCNVector3(-0.001,0,0),SCNVector3(0,0.001,0),SCNVector3(0,-0.001,0),SCNVector3(0,0,0.001),SCNVector3(0,0,-0.001)]
                 let spSide = vecs.randomElement()
-                let sideNode = SCNNode(geometry: SCNBox(width: 0.079, height: 0.079, length: 0.079, chamferRadius: 0.001))
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.078, height: 0.078, length: 0.078, chamferRadius: 0.001))
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
                 sideNode.position = spSide!
                 cubeNode.addChildNode(sideNode)
@@ -181,14 +181,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         } else {
             CoreDataHelper.createLevel(num: Int64(level))
         }
-        
-        isFirst = true
     }
     
     func gameIsLost(){
         reset(judge: false, worl: false)
         tryAgain.isHidden = true
-        isFirst = true
     }
 
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
@@ -227,9 +224,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
-            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
-                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
-                self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
+            if self.spCubeLoc.x-0.04 ... self.spCubeLoc.x+0.04 ~= currentCameraLocation.x &&
+                self.spCubeLoc.y-0.04 ... self.spCubeLoc.y+0.04 ~= currentCameraLocation.y &&
+                self.spCubeLoc.z-0.04 ... self.spCubeLoc.z+0.04 ~= currentCameraLocation.z {
                 
                 print("touched sp")
                 self.gameIsWon()
@@ -237,9 +234,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
-                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) &&
-                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
-                        (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
+                    if (self.otherCubes[cube].x - 0.04 ... self.otherCubes[cube].x + 0.04).contains(currentCameraLocation.x) &&
+                        (self.otherCubes[cube].y - 0.04 ... self.otherCubes[cube].y + 0.04).contains(currentCameraLocation.y) &&
+                        (self.otherCubes[cube].z - 0.04 ... self.otherCubes[cube].z + 0.04).contains(currentCameraLocation.z) {
                         print("touched others")
                         self.gameIsLost()
                     }
