@@ -44,6 +44,7 @@ class CoreDataHelper{
         do {
             let results = try managedContext.fetch(userFetch)
             if(results.count != 0) {
+                print("data is retrieved")
                 return results.first as! Level
             }
             return nil

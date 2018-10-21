@@ -286,7 +286,7 @@
                         <outlet property="eight" destination="sB7-VH-AgR" id="EI9-zV-dkJ"/>
                         <outlet property="eleven" destination="NCQ-r9-jCN" id="Mma-2M-7EG"/>
                         <outlet property="fifteen" destination="yAa-CN-gYK" id="OpC-nc-ZbP"/>
-                        <outlet property="fiv" destination="hAk-UT-ja4" id="r8r-LC-ATW"/>
+                        <outlet property="five" destination="hAk-UT-ja4" id="j32-GS-tOf"/>
                         <outlet property="four" destination="Nqk-T5-jpf" id="b0e-9K-hPp"/>
                         <outlet property="fourteen" destination="QKE-aY-5L9" id="Qnh-7r-P55"/>
                         <outlet property="nine" destination="7DJ-bW-1lC" id="z2Y-SS-ndl"/>
@@ -313,6 +313,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-UP-Z2l">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-ua-yX0">
+                                <rect key="frame" x="137" y="75" width="101" height="35"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Restart">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restart:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="RGj-6w-vH5"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIMER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00N-gd-QiU">
                                 <rect key="frame" x="0.0" y="42" width="375" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="24"/>
@@ -366,21 +381,6 @@
                                     <action selector="nxt:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="H56-wI-jkW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-ua-yX0">
-                                <rect key="frame" x="137" y="75" width="101" height="35"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Restart">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="restart:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="RGj-6w-vH5"/>
-                                </connections>
-                            </button>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="rPE-UP-Z2l">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -425,7 +425,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="clt-rx-YlW"/>
         <segue reference="0dX-K6-VxQ"/>
+=======
+        <segue reference="m5L-Ab-fCe"/>
+        <segue reference="u42-ou-5dL"/>
+>>>>>>> df08d792bb6d744223167076eec5b3ee9c8e0d7f
     </inferredMetricsTieBreakers>
 </document>

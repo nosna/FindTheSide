@@ -19,6 +19,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset(judge:true, worl:true)
         level += 1
         isFirst = true
+        self.nextLevel.isHidden = true
+        self.menu.isHidden = true
     }
     
     
@@ -115,21 +117,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         for cube in 1 ... (2 * level + 1) {
             let cubeNode = SCNNode()
-            cubeNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
+            cubeNode.geometry = SCNBox(width: 0.08, height: 0.08, length: 0.08, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
             cubeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
             
-            let x = Float.random(in: -0.5 ... 0.5)
-            let y = Float.random(in: -0.5 ... 0.5)
-            let z = Float.random(in: -0.5 ... 0)
+            let x = Float.random(in: -0.8 ... 0.8)
+            let y = Float.random(in: -0.8 ... 0.8)
+            let z = Float.random(in: -0.8 ... 0)
             cubeNode.position = SCNVector3(x, y, z)
             
             sceneView.scene.rootNode.addChildNode(cubeNode)
             
             if cube == spCube {
-                let vecs = [SCNVector3(0.005,0,0),SCNVector3(-0.005,0,0),SCNVector3(0,0.005,0),SCNVector3(0,-0.005,0),SCNVector3(0,0,0.005),SCNVector3(0,0,-0.005)]
+                let vecs = [SCNVector3(0.002,0,0),SCNVector3(-0.002,0,0),SCNVector3(0,0.002,0),SCNVector3(0,-0.002,0),SCNVector3(0,0,0.002),SCNVector3(0,0,-0.002)]
                 let spSide = vecs.randomElement()
-                let sideNode = SCNNode(geometry: SCNBox(width: 0.049, height: 0.049, length: 0.049, chamferRadius: 0.001))
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.078, height: 0.078, length: 0.078, chamferRadius: 0.001))
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
                 sideNode.position = spSide!
                 cubeNode.addChildNode(sideNode)
@@ -152,7 +154,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.removeFromParentNode()
         }
         self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-    
+        
         if judge == true {
         //timer
           countdown = 60
@@ -165,8 +167,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 time.invalidate()
                 timer.text = "You Lose"
             }
-            
         }
+        otherCubes.removeAll()
     }
     
     //MARK: - Game Result
@@ -184,14 +186,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         } else {
             CoreDataHelper.createLevel(num: Int64(level))
         }
-        
-        isFirst = true
     }
     
     func gameIsLost(){
         reset(judge: false, worl: false)
         tryAgain.isHidden = true
-        isFirst = true
     }
 
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
@@ -218,25 +217,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             print("here")
+            
             if self.isFirst {
-                let beeScene = SCNScene(named: "art.scnassets/bee.scn")!
-                guard let beeNode = beeScene.rootNode.childNode(withName: "bee", recursively: true) else {
-                    return
-                }
-//                var ballShape = SCNSphere(radius: 0.1)
-//                self.node = SCNNode(geometry: ballShape)
-//                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
-                beeNode.position = currentCameraLocation
-                self.sceneView.scene.rootNode.addChildNode(beeNode)
+//                let beeScene = SCNScene(named: "art.scnassets/bee.scn")!
+//                self.beeNode = beeScene.rootNode.childNode(withName: "bee", recursively: true)
+                let ballShape = SCNSphere(radius: 0.02)
+                self.node = SCNNode(geometry: ballShape)
+                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+                self.node.position = currentCameraLocation
+                self.sceneView.scene.rootNode.addChildNode(self.node)
                 self.isFirst = false
             } else {
-                beeNode.position = currentCameraLocation
+                self.node.position = currentCameraLocation
             }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
-            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
-                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
-                self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
+            if self.spCubeLoc.x-0.04 ... self.spCubeLoc.x+0.04 ~= currentCameraLocation.x &&
+                self.spCubeLoc.y-0.04 ... self.spCubeLoc.y+0.04 ~= currentCameraLocation.y &&
+                self.spCubeLoc.z-0.04 ... self.spCubeLoc.z+0.04 ~= currentCameraLocation.z {
                 
                 print("touched sp")
                 self.gameIsWon()
@@ -244,9 +242,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
-                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) &&
-                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
-                        (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
+                    if (self.otherCubes[cube].x - 0.04 ... self.otherCubes[cube].x + 0.04).contains(currentCameraLocation.x) &&
+                        (self.otherCubes[cube].y - 0.04 ... self.otherCubes[cube].y + 0.04).contains(currentCameraLocation.y) &&
+                        (self.otherCubes[cube].z - 0.04 ... self.otherCubes[cube].z + 0.04).contains(currentCameraLocation.z) {
                         print("touched others")
                         self.gameIsLost()
                     }
