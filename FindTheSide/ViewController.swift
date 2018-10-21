@@ -185,7 +185,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
                 self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
                 self.gameIsWon()
-            } else {
+            } else { 
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
