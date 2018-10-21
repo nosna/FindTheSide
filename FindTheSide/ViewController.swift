@@ -16,15 +16,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     @IBAction func nxt(_ sender: UIButton) {
-        reset(judge:true, worl:true)
+        gameIsWon()
         level += 1
-        isFirst = true
     }
     
     
     @IBAction func rst(_ sender: Any) {
-        reset(judge:true, worl:true)
-        isFirst = true
+        //reset(judge:true, worl:true)
+        gameIsLost()
     }
     
     @IBAction func restart(_ sender: UIButton) {
@@ -172,8 +171,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     //MARK: - Game Result
     func gameIsWon(){
         reset(judge: false, worl: true)
-        self.nextLevel.isHidden = false
-        self.menu.isHidden = false
+        
         //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             let highNum = ViewController.highest.levelNum
@@ -190,7 +188,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func gameIsLost(){
         reset(judge: false, worl: false)
-        tryAgain.isHidden = true
         isFirst = true
     }
 
@@ -237,7 +234,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
                 
                 print("touched sp")
-                self.gameIsWon()
+                self.nextLevel.isHidden = false
+                self.menu.isHidden = false
             } else {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
@@ -246,7 +244,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                         (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
                         (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
                         print("touched others")
-                        self.gameIsLost()
+                        self.tryAgain.isHidden = true
                     }
                 }
             }
