@@ -214,14 +214,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             print("here")
             if self.isFirst {
-                var ballShape = SCNSphere(radius: 0.1)
-                self.node = SCNNode(geometry: ballShape)
-                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
-                self.node.position = currentCameraLocation
-                self.sceneView.scene.rootNode.addChildNode(self.node)
+                let beeScene = SCNScene(named: "art.scnassets/bee.scn")!
+                guard let beeNode = beeScene.rootNode.childNode(withName: "bee", recursively: true) else {
+                    return
+                }
+//                var ballShape = SCNSphere(radius: 0.1)
+//                self.node = SCNNode(geometry: ballShape)
+//                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+                beeNode.position = currentCameraLocation
+                self.sceneView.scene.rootNode.addChildNode(beeNode)
                 self.isFirst = false
             } else {
-                self.node.position = currentCameraLocation
+                beeNode.position = currentCameraLocation
             }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
