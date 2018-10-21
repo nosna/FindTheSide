@@ -255,30 +255,17 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9E-VT-37X">
-                                <rect key="frame" x="111" y="600" width="152" height="35"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                <state key="normal" title="Back To Home">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="q1H-El-qlI" kind="show" id="tgs-a5-sTg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="0K5-BQ-vN7"/>
-                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="bottom" secondItem="N9E-VT-37X" secondAttribute="bottom" constant="32" id="3ip-EL-IR6"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="59" id="5AE-5l-IhD"/>
                             <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="cUf-Jw-A7H" secondAttribute="trailing" constant="59" id="7rw-iP-dtr"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="8p9-Da-nef"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="trailing" secondItem="mdT-7Q-oEd" secondAttribute="trailing" id="BCy-4k-8oe"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" id="W84-ge-Nbu"/>
-                            <constraint firstItem="mdT-7Q-oEd" firstAttribute="trailing" secondItem="N9E-VT-37X" secondAttribute="trailing" constant="112" id="Zfd-4m-dtY"/>
                             <constraint firstItem="cUf-Jw-A7H" firstAttribute="top" secondItem="KnF-TU-VB0" secondAttribute="bottom" constant="83.670000000000002" id="kWG-q3-Jhj"/>
                             <constraint firstItem="KnF-TU-VB0" firstAttribute="top" secondItem="mdT-7Q-oEd" secondAttribute="top" constant="81" id="kWo-nz-xO4"/>
-                            <constraint firstItem="N9E-VT-37X" firstAttribute="leading" secondItem="mdT-7Q-oEd" secondAttribute="leading" constant="111" id="lY1-gI-dO4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdT-7Q-oEd"/>
                     </view>
@@ -347,12 +334,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-9b-Vrw">
-                                <rect key="frame" x="93" y="612" width="46" height="35"/>
+                                <rect key="frame" x="153" y="612" width="69" height="35"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Exit">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="FxN-Xv-6Xp" kind="show" id="QIN-zH-VQS"/>
@@ -369,24 +354,11 @@
                                     <action selector="nxt:" destination="K2O-Sj-CQC" eventType="touchUpInside" id="H56-wI-jkW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-ua-yX0">
-                                <rect key="frame" x="199" y="611" width="60" height="35"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="22"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="FxN-Xv-6Xp" kind="show" id="ykK-qo-BkM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="rPE-UP-Z2l" secondAttribute="trailing" id="1h8-N3-0TB"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" id="43s-5I-WfI"/>
-                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="Bee-ua-yX0" secondAttribute="trailing" constant="116" id="9aL-gG-9ud"/>
                             <constraint firstItem="fOx-a0-Nni" firstAttribute="top" secondItem="00N-gd-QiU" secondAttribute="bottom" constant="241" id="G5m-jE-PAa"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="top" secondItem="kiX-m1-3dH" secondAttribute="top" id="GDM-o5-0Pr"/>
                             <constraint firstItem="00N-gd-QiU" firstAttribute="trailing" secondItem="mqB-qt-snX" secondAttribute="trailing" id="I3K-MO-43r"/>
@@ -395,17 +367,15 @@
                             <constraint firstItem="00N-gd-QiU" firstAttribute="top" secondItem="mqB-qt-snX" secondAttribute="top" constant="22" id="Jtu-CH-7En"/>
                             <constraint firstItem="sGp-8b-Nm5" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="93" id="LgZ-vY-uhn"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="sGp-8b-Nm5" secondAttribute="trailing" constant="93" id="NpA-u4-zS0"/>
-                            <constraint firstItem="Bee-ua-yX0" firstAttribute="leading" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="60" id="Nqv-NP-xBR"/>
-                            <constraint firstItem="hYs-9b-Vrw" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="93" id="RDP-6Y-crh"/>
-                            <constraint firstItem="mqB-qt-snX" firstAttribute="bottom" secondItem="Bee-ua-yX0" secondAttribute="bottom" constant="21" id="YWN-c4-roZ"/>
+                            <constraint firstItem="hYs-9b-Vrw" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="153" id="YoE-Px-fAe"/>
                             <constraint firstItem="Zq0-Bb-fXr" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="93" id="bRO-mG-Zlm"/>
-                            <constraint firstItem="Bee-ua-yX0" firstAttribute="leading" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="60" id="gww-nY-Fg9"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="bottom" secondItem="mqB-qt-snX" secondAttribute="bottom" id="hUO-DG-GLX"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="bottom" secondItem="hYs-9b-Vrw" secondAttribute="bottom" constant="20" id="mQ6-gS-ysI"/>
                             <constraint firstItem="00N-gd-QiU" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" id="mTx-M3-4e7"/>
                             <constraint firstItem="fOx-a0-Nni" firstAttribute="leading" secondItem="mqB-qt-snX" secondAttribute="leading" constant="98" id="pOm-Lc-oz1"/>
                             <constraint firstItem="Zq0-Bb-fXr" firstAttribute="top" secondItem="fOx-a0-Nni" secondAttribute="bottom" constant="4" id="pnD-E9-Xp6"/>
                             <constraint firstItem="rPE-UP-Z2l" firstAttribute="trailing" secondItem="mqB-qt-snX" secondAttribute="trailing" id="tLr-jI-0Z9"/>
+                            <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="hYs-9b-Vrw" secondAttribute="trailing" constant="153" id="uTI-cH-aYP"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="rPE-UP-Z2l" secondAttribute="trailing" id="y5u-Is-q8Z"/>
                             <constraint firstItem="mqB-qt-snX" firstAttribute="trailing" secondItem="fOx-a0-Nni" secondAttribute="trailing" constant="99" id="zP3-MD-c1C"/>
                         </constraints>
@@ -425,12 +395,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
         <segue reference="m5L-Ab-fCe"/>
         <segue reference="QIN-zH-VQS"/>
-=======
-        <segue reference="qcZ-mJ-pDX"/>
-        <segue reference="u42-ou-5dL"/>
->>>>>>> 954a6ab09935bf10a90b87746d8059d1afc11b00
     </inferredMetricsTieBreakers>
 </document>
