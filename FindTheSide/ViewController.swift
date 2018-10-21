@@ -159,7 +159,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         isFirst = true
     }
     
-    fu nc gameIsLost(){
+    func gameIsLost(){
         reset()
         tryAgain.isHidden = true
         isFirst = true
@@ -184,6 +184,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
                 self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
                 self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
+                
+                print("touched sp")
                 self.gameIsWon()
             } else { 
                 //            print(level)
@@ -192,6 +194,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) &&
                         (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
                         (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
+                        print("touched others")
                         self.gameIsLost()
                     }
                 }
