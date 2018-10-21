@@ -59,6 +59,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         //        sceneView.scene = scene
         //        sceneView.session.run(configuration)
+        sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin]
         sceneView.autoenablesDefaultLighting = true
         //
         nextLevel.isHidden = true
@@ -181,13 +182,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
         DispatchQueue.main.async {
+            print("here")
+            print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
+            print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
             if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
                 self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
                 self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
                 
                 print("touched sp")
                 self.gameIsWon()
-            } else { 
+            } else {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
@@ -201,8 +205,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
         
-        
-//        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
