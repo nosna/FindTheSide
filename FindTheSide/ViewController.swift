@@ -164,47 +164,42 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset()
         tryAgain.isHidden = true
     }
-    /*
-     // Override to create and configure nodes for anchors added to the view's session.
-     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-     let node = SCNNode()
-     
-     return node
-     }
-     */
-    
-    func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        // Do something with the new transform
-        let currentTransform = frame.camera.transform
-        print(currentTransform)
-        
-        if spCubeLoc.x-0.025 ... spCubeLoc.x+0.025 ~= currentTransform.columns.3.x ||
-            spCubeLoc.y-0.025 ... spCubeLoc.y+0.025 ~= currentTransform.columns.3.y ||
-            spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentTransform.columns.3.z {
+
+    func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        guard let pointOfView = sceneView.pointOfView else {
+            return
+        }
+        let transform = pointOfView.transform
+        let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
+        let location = SCNVector3(transform.m41, transform.m42, transform.m43)
+        let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
+        if spCubeLoc.x-0.025 ... spCubeLoc.x+0.025 ~= currentCameraLocation.x ||
+            spCubeLoc.y-0.025 ... spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
+            spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentCameraLocation.z {
             gameIsWon()
         } else {
             for cube in 0...otherCubes.count - 1 {
-                if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentTransform.columns.3.x ||
-                    otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentTransform.columns.3.y ||
-                    otherCubes[cube].z-0.025 ... otherCubes[cube].z+0.025 ~= currentTransform.columns.3.z {
+                if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentCameraLocation.x ||
+                    otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentCameraLocation.y ||
+                    otherCubes[cube].z-0.025 ... otherCubes[cube].z+0.025 ~= currentCameraLocation.z {
                     gameIsLost()
                 }
             }
         }
     }
     
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
+//    func session(_ session: ARSession, didFailWithError error: Error) {
+//        // Present an error message to the user
+//
+//    }
+//
+//    func sessionWasInterrupted(_ session: ARSession) {
+//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+//
+//    }
+//
+//    func sessionInterruptionEnded(_ session: ARSession) {
+//        // Reset tracking and/or remove existing anchors if consistent tracking is required
+//
+//    }
 }
