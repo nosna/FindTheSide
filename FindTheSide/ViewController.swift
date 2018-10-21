@@ -179,21 +179,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
-        if spCubeLoc.x-0.025 ... spCubeLoc.x+0.025 ~= currentCameraLocation.x ||
-            spCubeLoc.y-0.025 ... spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
-            spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentCameraLocation.z {
-            gameIsWon()
-        } else {
-//            print(level)
-            for cube in 0...otherCubes.count - 1 {
-                print(otherCubes[cube].x, otherCubes[cube].y, otherCubes[cube].z)
-                if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentCameraLocation.x ||
-                    otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentCameraLocation.y ||
-                    otherCubes[cube].z-0.025 ... otherCubes[cube].z+0.025 ~= currentCameraLocation.z {
-                    gameIsLost()
+        DispatchQueue.main.async {
+            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x ||
+                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y ||
+                self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
+                self.gameIsWon()
+            } else {
+                //            print(level)
+                for cube in 0...self.otherCubes.count - 1 {
+//                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
+                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) ||
+                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) ||
+                        (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
+                        self.gameIsLost()
+                    }
                 }
             }
         }
+        
         
 //        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
     }
