@@ -194,16 +194,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
         
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
-        if isFirst {
-            var ballShape = SCNSphere(radius: 0.1)
-            self.node = SCNNode(geometry: ballShape)
-            self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
-            self.node.position = currentCameraLocation
-            self.sceneView.scene.rootNode.addChildNode(node)
-        } else {
-            self.node.position = currentCameraLocation
-        }
-        
 //        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
 //            if node.geometry is SCNSphere {
 //                node.removeFromParentNode()
@@ -213,6 +203,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             print("here")
+            if self.isFirst {
+                var ballShape = SCNSphere(radius: 0.1)
+                self.node = SCNNode(geometry: ballShape)
+                self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+                self.node.position = currentCameraLocation
+                self.sceneView.scene.rootNode.addChildNode(self.node)
+            } else {
+                self.node.position = currentCameraLocation
+            }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
             if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
