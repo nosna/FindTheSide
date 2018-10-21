@@ -187,7 +187,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 
                 print("touched sp")
                 self.gameIsWon()
-            } else { 
+            } else {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
