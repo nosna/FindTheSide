@@ -23,13 +23,37 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     }
     */
     static var tag = 10
+    @IBOutlet weak var one: UIButton!
+    @IBOutlet weak var two: UIButton!
+    @IBOutlet weak var three: UIButton!
+    @IBOutlet weak var four: UIButton!
+    @IBOutlet weak var five: UIButton!
+    @IBOutlet weak var six: UIButton!
+    @IBOutlet weak var seven: UIButton!
+    @IBOutlet weak var eight: UIButton!
+    @IBOutlet weak var nine: UIButton!
+    @IBOutlet weak var ten: UIButton!
+    @IBOutlet weak var eleven: UIButton!
+    @IBOutlet weak var twelve: UIButton!
+    @IBOutlet weak var thirteen: UIButton!
+    @IBOutlet weak var fourteen: UIButton!
+    @IBOutlet weak var fifteen: UIButton!
+    @IBOutlet weak var sixteen: UIButton!
+    var b:[UIButton]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        b = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, eleven, twelve, thirteen, fourteen, fifteen, sixteen]
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             ViewController.highestNum = Int(ViewController.highest.levelNum)
-            print("The highest level so far is " + String(ViewController.highest.levelNum))
+        } else {
+            ViewController.highestNum = 1
+        }
+        print("The highest level so far is " + String(ViewController.highest.levelNum))
+        for num in ViewController.highestNum+1...15 {
+            b[num].titleLabel!.textColor = UIColor.white
         }
     }
     

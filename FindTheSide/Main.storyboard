@@ -269,6 +269,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mdT-7Q-oEd"/>
                     </view>
+                    <connections>
+                        <outlet property="eight" destination="sB7-VH-AgR" id="EI9-zV-dkJ"/>
+                        <outlet property="eleven" destination="NCQ-r9-jCN" id="Mma-2M-7EG"/>
+                        <outlet property="fifteen" destination="yAa-CN-gYK" id="OpC-nc-ZbP"/>
+                        <outlet property="fiv" destination="hAk-UT-ja4" id="r8r-LC-ATW"/>
+                        <outlet property="four" destination="Nqk-T5-jpf" id="b0e-9K-hPp"/>
+                        <outlet property="fourteen" destination="QKE-aY-5L9" id="Qnh-7r-P55"/>
+                        <outlet property="nine" destination="7DJ-bW-1lC" id="z2Y-SS-ndl"/>
+                        <outlet property="one" destination="E8U-iv-sTn" id="i9T-LG-G10"/>
+                        <outlet property="seven" destination="DIE-a8-Tig" id="a8b-2b-ZDP"/>
+                        <outlet property="six" destination="Jor-Ju-Wds" id="jzr-J9-wlC"/>
+                        <outlet property="sixteen" destination="t7G-tc-82b" id="fqE-CM-9HZ"/>
+                        <outlet property="ten" destination="94y-ct-i7k" id="dRl-oR-s5C"/>
+                        <outlet property="thirteen" destination="7NZ-1i-sEH" id="55G-fp-KYU"/>
+                        <outlet property="three" destination="3Ui-Ck-hIK" id="4Yq-r4-7UU"/>
+                        <outlet property="twelve" destination="FfT-lN-28b" id="Uxy-uu-cJR"/>
+                        <outlet property="two" destination="7Y6-q5-3Et" id="rsD-de-FA0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPs-bv-eUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,7 +395,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qcZ-mJ-pDX"/>
-        <segue reference="0dX-K6-VxQ"/>
+        <segue reference="m5L-Ab-fCe"/>
+        <segue reference="QIN-zH-VQS"/>
     </inferredMetricsTieBreakers>
 </document>
