@@ -38,6 +38,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var level = 0
     var isFirst = true
     var isWon = false
+    var node: SCNNode!
     @IBOutlet weak var timer: UILabel!
     
 
@@ -192,16 +193,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
-        var ballShape = SCNSphere(radius: 0.01)
-        var node = SCNNode(geometry: ballShape)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
-        node.position = currentCameraLocation
-        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
-            if node.geometry is SCNSphere {
-                node.removeFromParentNode()
-            }
+        if isFirst {
+            var ballShape = SCNSphere(radius: 0.1)
+            self.node = SCNNode(geometry: ballShape)
+            self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
+            self.node.position = currentCameraLocation
+            self.sceneView.scene.rootNode.addChildNode(node)
+        } else {
+            self.node.position = currentCameraLocation
         }
-        self.sceneView.scene.rootNode.addChildNode(node)
+        
+//        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
+//            if node.geometry is SCNSphere {
+//                node.removeFromParentNode()
+//            }
+//        }
+        
         
         DispatchQueue.main.async {
             print("here")
