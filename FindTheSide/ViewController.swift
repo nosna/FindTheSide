@@ -159,7 +159,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         isFirst = true
     }
     
-    func gameIsLost(){
+    fu nc gameIsLost(){
         reset()
         tryAgain.isHidden = true
         isFirst = true
