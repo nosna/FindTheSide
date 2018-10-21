@@ -15,6 +15,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBAction func nxt(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func rst(_ sender: Any) {
+    }
+    
     //time
     var time: Timer!
     var countdown:Int = 60
