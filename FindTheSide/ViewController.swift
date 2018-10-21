@@ -191,8 +191,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
+        
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
-        var ballShape = SCNSphere(radius: 0.01)
+        var ballShape = SCNSphere(radius: 0.1)
         var node = SCNNode(geometry: ballShape)
         node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
         node.position = currentCameraLocation
