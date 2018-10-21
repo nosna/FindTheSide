@@ -53,7 +53,8 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
         }
         print("The highest level so far is " + String(ViewController.highest.levelNum))
         for num in ViewController.highestNum+1...15 {
-            b[num].titleLabel!.textColor = UIColor.white
+            //b[num].titleLabel!.textColor = UIColor.white
+            b[num].tintColor = UIColor.white
         }
     }
     
