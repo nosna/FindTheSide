@@ -19,6 +19,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset(judge:true, worl:true)
         level += 1
         isFirst = true
+        nextLevel.isHidden = false
+        menu.isHidden = false
     }
     
     
@@ -110,21 +112,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         for cube in 1 ... (2 * level + 1) {
             let cubeNode = SCNNode()
-            cubeNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
+            cubeNode.geometry = SCNBox(width: 0.08, height: 0.08, length: 0.08, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
             cubeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
             
-            let x = Float.random(in: -0.5 ... 0.5)
-            let y = Float.random(in: -0.5 ... 0.5)
-            let z = Float.random(in: -0.5 ... 0)
+            let x = Float.random(in: -0.8 ... 0.8)
+            let y = Float.random(in: -0.8 ... 0.8)
+            let z = Float.random(in: -0.8 ... 0)
             cubeNode.position = SCNVector3(x, y, z)
             
             sceneView.scene.rootNode.addChildNode(cubeNode)
             
             if cube == spCube {
-                let vecs = [SCNVector3(0.005,0,0),SCNVector3(-0.005,0,0),SCNVector3(0,0.005,0),SCNVector3(0,-0.005,0),SCNVector3(0,0,0.005),SCNVector3(0,0,-0.005)]
+                let vecs = [SCNVector3(0.001,0,0),SCNVector3(-0.001,0,0),SCNVector3(0,0.001,0),SCNVector3(0,-0.001,0),SCNVector3(0,0,0.001),SCNVector3(0,0,-0.001)]
                 let spSide = vecs.randomElement()
-                let sideNode = SCNNode(geometry: SCNBox(width: 0.049, height: 0.049, length: 0.049, chamferRadius: 0.001))
+                let sideNode = SCNNode(geometry: SCNBox(width: 0.079, height: 0.079, length: 0.079, chamferRadius: 0.001))
                 sideNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
                 sideNode.position = spSide!
                 cubeNode.addChildNode(sideNode)
@@ -169,7 +171,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         reset(judge: false, worl: true)
         self.nextLevel.isHidden = false
         self.menu.isHidden = false
-        ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
+        //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             let highNum = ViewController.highest.levelNum
             if(level > Int(highNum)) {
@@ -214,7 +216,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         DispatchQueue.main.async {
             print("here")
             if self.isFirst {
-                var ballShape = SCNSphere(radius: 0.1)
+                var ballShape = SCNSphere(radius: 0.01)
                 self.node = SCNNode(geometry: ballShape)
                 self.node.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
                 self.node.position = currentCameraLocation
