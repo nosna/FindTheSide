@@ -24,7 +24,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     var spCubeLoc = SCNVector3(0,0,0)
     var otherCubes: [SCNVector3] = []
     var level = 9
-
+    var isFirst = true
     @IBOutlet weak var timer: UILabel!
     
     @objc
@@ -64,7 +64,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         nextLevel.isHidden = true
         menu.isHidden = true
         tryAgain.isHidden = true
-        generateCubes()
 //        session(ARSession, didUpdate: ARFrame)
     }
     
@@ -96,7 +95,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func generateCubes() {
         let spCube = Int.random(in: 1...level)
         
-        for cube in 1 ... level {
+        for cube in 1 ... (2 * level + 1) {
             let cubeNode = SCNNode()
             cubeNode.geometry = SCNBox(width: 0.05, height: 0.05, length: 0.05, chamferRadius: 0)
             cubeNode.geometry?.firstMaterial?.specular.contents = UIColor.white
@@ -157,15 +156,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             CoreDataHelper.createLevel(num: Int64(level))
         }
         
-        
+        isFirst = true
     }
     
     func gameIsLost(){
         reset()
         tryAgain.isHidden = true
+        isFirst = true
     }
 
     func renderer(_ renderer: SCNSceneRenderer, willRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        if isFirst {
+            generateCubes()
+            isFirst = false
+        }
         guard let pointOfView = sceneView.pointOfView else {
             return
         }
@@ -178,6 +182,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             spCubeLoc.z-0.025 ... spCubeLoc.z+0.025 ~= currentCameraLocation.z {
             gameIsWon()
         } else {
+            print(level)
             for cube in 0...otherCubes.count - 1 {
                 if otherCubes[cube].x-0.025 ... otherCubes[cube].x+0.025 ~= currentCameraLocation.x ||
                     otherCubes[cube].y-0.025 ... otherCubes[cube].y+0.025 ~= currentCameraLocation.y ||
