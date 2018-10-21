@@ -16,10 +16,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     @IBAction func nxt(_ sender: UIButton) {
+        reset()
+        level += 1
+        isFirst = true
     }
     
     
     @IBAction func rst(_ sender: Any) {
+        reset()
+        isFirst = true
     }
     
     //time
@@ -30,7 +35,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
     var otherCubes: [SCNVector3] = []
-    var level = 9
+    var level = 0
     var isFirst = true
     var isWon = false
     @IBOutlet weak var timer: UILabel!
