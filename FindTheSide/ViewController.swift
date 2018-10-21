@@ -53,7 +53,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo: nil, repeats: true)        
         //
         // Set the view's delegate
-//        sceneView.delegate = self
+        sceneView.delegate = self
         //        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
         // 
         // Set the scene to the view
@@ -186,6 +186,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 }
             }
         }
+        print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
     }
     
 //    func session(_ session: ARSession, didFailWithError error: Error) {
