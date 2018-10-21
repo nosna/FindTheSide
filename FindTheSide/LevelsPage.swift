@@ -22,6 +22,8 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    static var tag = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
@@ -31,11 +33,17 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    
+
     @IBAction func startSearchQuery(sender: AnyObject) {
         let button = sender as! UIButton
-        level = button.tag
-        print("the tag of the button is" + String(button.tag))
-        print(level)
+        LevelsPage.tag = button.tag
+        print("the tag of the button is " + String(LevelsPage.tag))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        var secondController = segue.destination as! ViewController
+        secondController.level = LevelsPage.tag
+        
+        
     }
 }
