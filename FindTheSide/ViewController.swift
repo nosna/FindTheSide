@@ -18,12 +18,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func nxt(_ sender: UIButton) {
         gameIsWon()
         level += 1
+        self.nextLevel.isHidden = true
+        self.menu.isHidden = true
+        countdown = 60
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
     }
     
     
     @IBAction func rst(_ sender: Any) {
         //reset(judge:true, worl:true)
         gameIsLost()
+        self.tryAgain.isHidden = true
+        countdown = 60
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
     }
     
     @IBAction func restart(_ sender: UIButton) {
@@ -146,6 +153,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func reset(judge:Bool, worl:Bool){
         sceneView.session.pause()
+        otherCubes.removeAll()
         self.sceneView.scene.rootNode.enumerateChildNodes{
             (node,_) in
             node.removeFromParentNode()
@@ -174,10 +182,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
-            let highNum = ViewController.highest.levelNum
-            if(level > Int(highNum)) {
+            //var highNum = ViewController.highest.levelNum
+            if(level > ViewController.highestNum) {
                 CoreDataHelper.createLevel(num: Int64(level))
                 CoreDataHelper.deleteLevel(level: ViewController.highest)
+                ViewController.highestNum = level
             }
         } else {
             CoreDataHelper.createLevel(num: Int64(level))
@@ -218,7 +227,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             if self.isFirst {
 //                let beeScene = SCNScene(named: "art.scnassets/bee.scn")!
 //                self.beeNode = beeScene.rootNode.childNode(withName: "bee", recursively: true)
-                var ballShape = SCNSphere(radius: 0.1)
+                var ballShape = SCNSphere(radius: 0.02)
                 self.beeNode = SCNNode(geometry: ballShape)
                 self.beeNode.geometry?.firstMaterial?.diffuse.contents = UIColor.yellow
                 self.beeNode.position = currentCameraLocation
@@ -229,22 +238,32 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
             print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
             print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
-            if self.spCubeLoc.x-0.025 ... self.spCubeLoc.x+0.025 ~= currentCameraLocation.x &&
-                self.spCubeLoc.y-0.025 ... self.spCubeLoc.y+0.025 ~= currentCameraLocation.y &&
-                self.spCubeLoc.z-0.025 ... self.spCubeLoc.z+0.025 ~= currentCameraLocation.z {
+            if self.spCubeLoc.x-0.03 ... self.spCubeLoc.x+0.03 ~= currentCameraLocation.x &&
+                self.spCubeLoc.y-0.03 ... self.spCubeLoc.y+0.03 ~= currentCameraLocation.y &&
+                self.spCubeLoc.z-0.03 ... self.spCubeLoc.z+0.03 ~= currentCameraLocation.z {
                 
                 print("touched sp")
+                if(ViewController.highest != nil){
+                    //var highNum = ViewController.highest.levelNum
+                    if(self.level > ViewController.highestNum) {
+                        CoreDataHelper.createLevel(num: Int64(self.level))
+                        CoreDataHelper.deleteLevel(level: ViewController.highest)
+                        ViewController.highestNum = self.level
+                    }
+                } else {
+                    CoreDataHelper.createLevel(num: Int64(self.level))
+                }
                 self.nextLevel.isHidden = false
                 self.menu.isHidden = false
             } else {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
-                    if (self.otherCubes[cube].x - 0.025 ... self.otherCubes[cube].x + 0.025).contains(currentCameraLocation.x) &&
-                        (self.otherCubes[cube].y - 0.025 ... self.otherCubes[cube].y + 0.025).contains(currentCameraLocation.y) &&
-                        (self.otherCubes[cube].z - 0.025 ... self.otherCubes[cube].z + 0.025).contains(currentCameraLocation.z) {
+                    if (self.otherCubes[cube].x - 0.035 ... self.otherCubes[cube].x + 0.035).contains(currentCameraLocation.x) &&
+                        (self.otherCubes[cube].y - 0.035 ... self.otherCubes[cube].y + 0.035).contains(currentCameraLocation.y) &&
+                        (self.otherCubes[cube].z - 0.035 ... self.otherCubes[cube].z + 0.035).contains(currentCameraLocation.z) {
                         print("touched others")
-                        self.tryAgain.isHidden = true
+                        self.tryAgain.isHidden = false
                     }
                 }
             }
