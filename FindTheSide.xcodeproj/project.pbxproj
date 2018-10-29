@@ -108,8 +108,8 @@
 		3ED000E7217AE8440014AC89 /* FindTheSide */ = {
 			isa = PBXGroup;
 			children = (
-				95D3D18D217BA75000E5D1E2 /* Main.storyboard */,
 				3ED000E8217AE8450014AC89 /* AppDelegate.swift */,
+				95D3D18D217BA75000E5D1E2 /* Main.storyboard */,
 				3ED000EA217AE8450014AC89 /* art.scnassets */,
 				95D3D185217B1ADE00E5D1E2 /* WelcomePageViewController.swift */,
 				95D3D187217B1B2700E5D1E2 /* LevelsPage.swift */,

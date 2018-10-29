@@ -34,7 +34,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func restart(_ sender: UIButton) {
-        reset(judge:true, worl:true)
+        reset()
         isFirst = true
     }
     
@@ -150,6 +150,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //    @IBAction func reset(_ sender: Any) {
 //        restartSession()
 //    }
+    func reset(){
+        sceneView.session.pause()
+        otherCubes.removeAll()
+        self.sceneView.scene.rootNode.enumerateChildNodes{
+            (node,_) in
+            node.removeFromParentNode()
+        }
+        self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+    }
+        
     
     func reset(judge:Bool, worl:Bool){
         sceneView.session.pause()
@@ -158,32 +168,32 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             (node,_) in
             node.removeFromParentNode()
         }
-        self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+        //self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     
-        if judge == true {
-        //timer
-          countdown = 60
-          time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
-        } else if judge == false{
-            if worl == true {
-                time.invalidate()
-                timer.text = "You Win"
-            } else {
-                time.invalidate()
-                timer.text = "You Lose"
-            }
-            
-        }
+//        if judge == true {
+//        //timer
+//          countdown = 60
+//          time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+//        } else if judge == false{
+//            if worl == true {
+//                time.invalidate()
+//                timer.text = "You Win"
+//            } else {
+//                time.invalidate()
+//                timer.text = "You Lose"
+//            }
+//
+//        }
     }
     
     //MARK: - Game Result
     func gameIsWon(){
-        reset(judge: false, worl: true)
-        
         //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             //var highNum = ViewController.highest.levelNum
+            print("highest so far is " + String(ViewController.highestNum))
             if(level > ViewController.highestNum) {
+                print(level)
                 CoreDataHelper.createLevel(num: Int64(level))
                 CoreDataHelper.deleteLevel(level: ViewController.highest)
                 ViewController.highestNum = level
@@ -191,12 +201,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         } else {
             CoreDataHelper.createLevel(num: Int64(level))
         }
-        
+        countdown = 60
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+        print("why is it not generating cubes")
         isFirst = true
     }
     
     func gameIsLost(){
-        reset(judge: false, worl: false)
+        //reset(judge: false, worl: false)
+        reset()
+        time.invalidate()
         isFirst = true
     }
 
@@ -243,6 +257,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 self.spCubeLoc.z-0.03 ... self.spCubeLoc.z+0.03 ~= currentCameraLocation.z {
                 
                 print("touched sp")
+                self.reset()
                 if(ViewController.highest != nil){
                     //var highNum = ViewController.highest.levelNum
                     if(self.level > ViewController.highestNum) {
@@ -263,6 +278,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                         (self.otherCubes[cube].y - 0.035 ... self.otherCubes[cube].y + 0.035).contains(currentCameraLocation.y) &&
                         (self.otherCubes[cube].z - 0.035 ... self.otherCubes[cube].z + 0.035).contains(currentCameraLocation.z) {
                         print("touched others")
+                        self.reset()
                         self.tryAgain.isHidden = false
                     }
                 }
