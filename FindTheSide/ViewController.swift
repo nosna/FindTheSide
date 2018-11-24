@@ -14,6 +14,22 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
+    var time: Timer!
+    var countdown:Int = 60
+    let configuration = ARWorldTrackingConfiguration()
+    static var highest: Level!
+    static var highestNum: Int!
+    var spCubeLoc = SCNVector3(0,0,0)
+    var otherCubes: [SCNVector3] = []
+    var level = 0
+    var isFirst = true
+    var isWon = false
+    var beeNode: SCNNode!
+    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var tryAgain: UIButton!
+    @IBOutlet weak var nextLevel: UIButton!
+    @IBOutlet weak var menu: UIButton!
+    
     
     @IBAction func nxt(_ sender: UIButton) {
         gameIsWon()
@@ -36,22 +52,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func restart(_ sender: UIButton) {
         reset()
         isFirst = true
+        print("game has restarted")
     }
-    
-    //time
-    var time: Timer!
-    var countdown:Int = 60
-    let configuration = ARWorldTrackingConfiguration()
-    static var highest: Level!
-    static var highestNum: Int!
-    var spCubeLoc = SCNVector3(0,0,0)
-    var otherCubes: [SCNVector3] = []
-    var level = 0
-    var isFirst = true
-    var isWon = false
-    var beeNode: SCNNode!
-    @IBOutlet weak var timer: UILabel!
-    
 
     @objc
     func countdownAction() {
@@ -63,11 +65,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             timer.text = "\(countdown)"
         }
     }
-
-    
-    @IBOutlet weak var tryAgain: UIButton!
-    @IBOutlet weak var nextLevel: UIButton!
-    @IBOutlet weak var menu: UIButton!
     
     override func viewDidLoad() {
         
@@ -158,32 +155,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.removeFromParentNode()
         }
         self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-    }
-        
-    
-    func reset(judge:Bool, worl:Bool){
-        sceneView.session.pause()
-        otherCubes.removeAll()
-        self.sceneView.scene.rootNode.enumerateChildNodes{
-            (node,_) in
-            node.removeFromParentNode()
-        }
-        //self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-    
-//        if judge == true {
-//        //timer
-//          countdown = 60
-//          time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
-//        } else if judge == false{
-//            if worl == true {
-//                time.invalidate()
-//                timer.text = "You Win"
-//            } else {
-//                time.invalidate()
-//                timer.text = "You Lose"
-//            }
-//
-//        }
+        countdown = 60
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
     }
     
     //MARK: - Game Result
@@ -191,18 +164,19 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             //var highNum = ViewController.highest.levelNum
-            print("highest so far is " + String(ViewController.highestNum))
+            print("highest so far is " + String(ViewController.highest.levelNum))
             if(level > ViewController.highestNum) {
-                print(level)
+                print("level " + String(level))
                 CoreDataHelper.createLevel(num: Int64(level))
                 CoreDataHelper.deleteLevel(level: ViewController.highest)
+                ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
                 ViewController.highestNum = level
             }
         } else {
             CoreDataHelper.createLevel(num: Int64(level))
         }
-        countdown = 60
-        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+        print("this is the line before reset")
+        reset()
         print("why is it not generating cubes")
         isFirst = true
     }
@@ -218,16 +192,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if isFirst {
             generateCubes()
         }
-        
         guard let pointOfView = sceneView.pointOfView else {
             return
         }
-        
         let transform = pointOfView.transform
         let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentCameraLocation = SCNVector3Make(orientation.x + location.x, orientation.y + location.y, orientation.z + location.z)
-        
 //        print(spCubeLoc.x, spCubeLoc.y, spCubeLoc.z)
 //        self.sceneView.scene.rootNode.enumerateChildNodes{(node, _) in
 //            if node.geometry is SCNSphere {
@@ -237,7 +208,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         
         DispatchQueue.main.async {
-            print("here")
+            //print("here")
             if self.isFirst {
 //                let beeScene = SCNScene(named: "art.scnassets/bee.scn")!
 //                self.beeNode = beeScene.rootNode.childNode(withName: "bee", recursively: true)
@@ -250,14 +221,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             } else {
                 self.beeNode.position = currentCameraLocation
             }
-            print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
-            print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
+//            print(currentCameraLocation.x, currentCameraLocation.y, currentCameraLocation.z)
+//            print(self.spCubeLoc.x, self.spCubeLoc.y, self.spCubeLoc.z)
             if self.spCubeLoc.x-0.03 ... self.spCubeLoc.x+0.03 ~= currentCameraLocation.x &&
                 self.spCubeLoc.y-0.03 ... self.spCubeLoc.y+0.03 ~= currentCameraLocation.y &&
                 self.spCubeLoc.z-0.03 ... self.spCubeLoc.z+0.03 ~= currentCameraLocation.z {
                 
                 print("touched sp")
-                self.reset()
+//                self.reset()
                 if(ViewController.highest != nil){
                     //var highNum = ViewController.highest.levelNum
                     if(self.level > ViewController.highestNum) {
@@ -274,9 +245,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 //            print(level)
                 for cube in 0...self.otherCubes.count - 1 {
 //                    print(self.otherCubes[cube].x, self.otherCubes[cube].y, self.otherCubes[cube].z)
-                    if (self.otherCubes[cube].x - 0.035 ... self.otherCubes[cube].x + 0.035).contains(currentCameraLocation.x) &&
-                        (self.otherCubes[cube].y - 0.035 ... self.otherCubes[cube].y + 0.035).contains(currentCameraLocation.y) &&
-                        (self.otherCubes[cube].z - 0.035 ... self.otherCubes[cube].z + 0.035).contains(currentCameraLocation.z) {
+                    if self.otherCubes[cube].x-0.03 ... self.otherCubes[cube].x+0.03 ~= currentCameraLocation.x &&
+                        self.otherCubes[cube].y-0.03 ... self.otherCubes[cube].y+0.03 ~= currentCameraLocation.y &&
+                        self.otherCubes[cube].z-0.03 ... self.otherCubes[cube].z+0.03 ~= currentCameraLocation.z  {
                         print("touched others")
                         self.reset()
                         self.tryAgain.isHidden = false
@@ -301,4 +272,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
 
     }
+    
+//    func reset(judge:Bool, worl:Bool){
+//        sceneView.session.pause()
+//        otherCubes.removeAll()
+//        self.sceneView.scene.rootNode.enumerateChildNodes{
+//            (node,_) in
+//            node.removeFromParentNode()
+//        }
+//        //self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+//
+//        //        if judge == true {
+//        //        //timer
+//        //          countdown = 60
+//        //          time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdownAction), userInfo:nil, repeats: true)
+//        //        } else if judge == false{
+//        //            if worl == true {
+//        //                time.invalidate()
+//        //                timer.text = "You Win"
+//        //            } else {
+//        //                time.invalidate()
+//        //                timer.text = "You Lose"
+//        //            }
+//        //
+//        //        }
+//    }
 }

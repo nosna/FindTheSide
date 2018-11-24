@@ -44,7 +44,7 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        b = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, eleven, twelve, thirteen, fourteen, fifteen, sixteen]
+        b = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen]
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             ViewController.highestNum = Int(ViewController.highest.levelNum)
@@ -53,22 +53,32 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
         }
         print("The highest level so far is " + String(ViewController.highestNum))
         if ViewController.highestNum < 16 {
-            for num in ViewController.highestNum+1...16 {
+            for num in ViewController.highestNum+2...15 {
                 //b[num].titleLabel!.textColor = UIColor.white
                 b[num].tintColor = UIColor.white
                 //b[num].titleLabel!.textColor = UIColor.white
                 b[num].setTitleColor(UIColor.white, for: .normal)
                 b[num].isEnabled = false
-        }
-        }
-
+            }
+       }
+//            else {
+//            for num in 2...15 {
+//                //b[num].titleLabel!.textColor = UIColor.white
+//                b[num].tintColor = UIColor.white
+//                //b[num].titleLabel!.textColor = UIColor.white
+//                b[num].setTitleColor(UIColor.white, for: .normal)
+//                b[num].isEnabled = false
+//            }
+//        }
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        var secondController = segue.destination as! ViewController
-        let button = sender as! UIButton
-        secondController.level = button.tag
-        print("I'm in segue")
+        if(segue.identifier == "game"){
+            var secondController = segue.destination as! ViewController
+            let button = sender as! UIButton
+            secondController.level = button.tag
+            print("I'm in segue")
+        }
     }
 }

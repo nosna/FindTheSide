@@ -18,6 +18,22 @@ class CoreDataHelper{
     static let managedContext = persistentContainer.viewContext
     static let userEntity = NSEntityDescription.entity(forEntityName: "Level", in: managedContext)!
     
+    static func resetAllData(){
+        // create the delete request for the specified entity
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyEntity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        // get reference to the persistent container
+        let persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+        
+        // perform the delete
+        do {
+            try persistentContainer.viewContext.execute(deleteRequest)
+        } catch let error as NSError {
+            print(error)
+        }
+    }
+    
     static func createLevel(num: Int64){
         let level = NSManagedObject(entity: userEntity, insertInto: managedContext)
         level.setValue(num, forKey: "levelNum")

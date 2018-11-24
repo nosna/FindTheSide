@@ -13,7 +13,11 @@ import ARKit
 class WelcomePageViewController: UIViewController, ARSCNViewDelegate {
 
     
-//    override func viewDidLoad() {
+    @IBAction func clearCoreData(_ sender: UIButton) {
+        CoreDataHelper.resetAllData()
+        print("Core data is deleted")
+    }
+    //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //
 //        // Do any additional setup after loading the view.
