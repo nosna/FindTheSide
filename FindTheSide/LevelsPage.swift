@@ -23,21 +23,62 @@ class LevelsPage: UIViewController, ARSCNViewDelegate {
     }
     */
     static var tag = 10
+    @IBOutlet weak var one: UIButton!
+    @IBOutlet weak var two: UIButton!
+    @IBOutlet weak var three: UIButton!
+    @IBOutlet weak var four: UIButton!
+    @IBOutlet weak var five: UIButton!
+    @IBOutlet weak var six: UIButton!
+    @IBOutlet weak var seven: UIButton!
+    @IBOutlet weak var eight: UIButton!
+    @IBOutlet weak var nine: UIButton!
+    @IBOutlet weak var ten: UIButton!
+    @IBOutlet weak var eleven: UIButton!
+    @IBOutlet weak var twelve: UIButton!
+    @IBOutlet weak var thirteen: UIButton!
+    @IBOutlet weak var fourteen: UIButton!
+    @IBOutlet weak var fifteen: UIButton!
+    @IBOutlet weak var sixteen: UIButton!
+    var b:[UIButton]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        b = [one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen]
         ViewController.highest = CoreDataHelper.retrieveLevel() ?? nil
         if(ViewController.highest != nil){
             ViewController.highestNum = Int(ViewController.highest.levelNum)
-            print("The highest level so far is " + String(ViewController.highest.levelNum))
+        } else {
+            ViewController.highestNum = 1
         }
+        print("The highest level so far is " + String(ViewController.highestNum))
+        if ViewController.highestNum < 16 {
+            for num in ViewController.highestNum+2...15 {
+                //b[num].titleLabel!.textColor = UIColor.white
+                b[num].tintColor = UIColor.white
+                //b[num].titleLabel!.textColor = UIColor.white
+                b[num].setTitleColor(UIColor.white, for: .normal)
+                b[num].isEnabled = false
+            }
+       }
+//            else {
+//            for num in 2...15 {
+//                //b[num].titleLabel!.textColor = UIColor.white
+//                b[num].tintColor = UIColor.white
+//                //b[num].titleLabel!.textColor = UIColor.white
+//                b[num].setTitleColor(UIColor.white, for: .normal)
+//                b[num].isEnabled = false
+//            }
+//        }
     }
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        var secondController = segue.destination as! ViewController
-        let button = sender as! UIButton
-        secondController.level = button.tag
-        print("I'm in segue")
+        if(segue.identifier == "game"){
+            var secondController = segue.destination as! ViewController
+            let button = sender as! UIButton
+            secondController.level = button.tag
+            print("I'm in segue")
+        }
     }
 }
