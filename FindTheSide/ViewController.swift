@@ -13,10 +13,10 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
-    @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet var sceneView:  ARSCNView!
     var time: Timer!
-    var countdown:Int = 60
-    let configuration = ARWorldTrackingConfiguration()
+    var countdown:Int =  60
+    let configuration =  ARWorldTrackingConfiguration()
     static var highest: Level!
     static var highestNum: Int!
     var spCubeLoc = SCNVector3(0,0,0)
